@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 
-    <title>give - Recipient</title>
+    <title>give - Recipient Sign In</title>
 
     <link rel="stylesheet" id="smooth_slider_headcss-css" type="text/css" media="all">
   </head>
@@ -22,34 +22,24 @@
     </header>
 
     <div class="content">
-    <section id="loginform">
-      <h2 id="signin">Sign In</h2>
-          <table>
-            <tr>
-              <td id="login">
-                 <h6 id="label">Username</h6>
-              </td>
-              <td id="login">
-                <input type="text" placeholder="Enter Username" name="uname" required>
-              </td>
-            </tr>
-            <tr>
-              <td id="login">
-                 <h6 id="label">Password</h6>
-              </td>
-              <td id="login">
-                <input type="password" placeholder="Enter Password" name="psw" required>
-              </td>
-            </tr>
-          </table>
-          <div class="container">
-          <label>
-            <input type="checkbox" name="remember"> Remember me
-          </label>
-          </div>
-          <div class="container">
-           <button id="loginbutton" onclick="location.href='recipient.html'" type="button">Login</button>
-          </div>
+      <section id="recipientform">
+        <h2 id="signin">Select Your Organization</h2>
+        <div id="chooseorg">
+          <input type="radio" name="org" value="mary"> Mary's Place<br>
+          <input type="radio" name="org" value="rest"> Real Escape from Sex Trade<br>
+          <input type="radio" name="org" value="harvard"> Urban Rest Stop<br>
+          <input type="radio" name="org" value="mercy"> Mercy Housing Northwest<br>
+          <input type="radio" name="org" value="house"> Neighborhood House<br>
+          <input type="radio" name="org" value="reachout"> Reach Out Federal Way<br>
+          <input type="radio" name="org" value="martin"> Aloha Inn<br>
+          <input type="radio" name="org" value="sal"> The Salvation Army
+        </div>
+
+        <div class="buttonright">
+         <button id="choosebutton" onclick="location.href='recipient.html'" type="button">Continue</button>
+        </div>
     </section>
     </div>
+<a class="active" href="index.html" id="icon"><img src="./Resources/home.png" alt="Home"/></a>
+  </body>
 </html>

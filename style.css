@@ -55,21 +55,21 @@ body {
 }
 
 a:link {
-  color: #4b2e83;
+  color: #B73825;
   font-family: "Muli";
 }
 
 a:hover {
-  color: #b7a57a;
+  color: #B73825;
 }
 
 a:hover {
-  background-color: #DF744A;
+  background-color: #B73825;
   color: white;
 }
 
 .active {
-  background-color: #DF744A !important;
+  background-color: #B73825 !important;
   color: white;
 }
 
@@ -94,7 +94,7 @@ a:hover {
 
 /* buttons */
 .btncolor {
-  background-color: #FEDCD2;
+  background-color: #B73825;
 }
 
 button {
@@ -112,8 +112,17 @@ button:hover {
   color: #FEDCD2;
 }
 
-/* index.html */
+#icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #B73825;
+    border: 2px solid rgba(255, 255, 255, 0);
+}
 
+/* index.html */
 #logo {
   width: 500px;
   padding-bottom: 10px;
@@ -136,7 +145,6 @@ button:hover {
 }
 
 /* donorlogin.html */
-
 #loginform {
   border: 8px solid white;
   padding-right: 40px;
@@ -170,6 +178,8 @@ button:hover {
 
 #label {
   color: #522700;
+  font-family: "Muli";
+  padding-top: 4px;
 }
 
 /* donor.html */
@@ -196,7 +206,7 @@ th {
 
 #welcome {
   font-family: "Arvo";
-  font-size: 30px;
+  font-size: 24px;
 }
 
 #welcomedata {
@@ -222,9 +232,9 @@ th {
 #donortable {
   border: 8px solid white;
   margin-right: 40px;
-  margin-top: 40px;
   margin-left: 45px;
-  margin-bottom: 35px;
+  margin-top: 20px;
+  margin-bottom: 25px;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 20px;
   border-style: double;
@@ -239,4 +249,173 @@ th {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
+#donate {
+  font-size: 30px;
+  width: 130px;
+  height: 55px;
+  color: white;
+  background-color: #B73825;
+  border: 2px solid rgba(255, 255, 255, 0);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#impact {
+  font-size: 30px;
+  width: 130px;
+  height: 55px;
+  color: white;
+  background-color: #B73825;
+  border: 2px solid rgba(255, 255, 255, 0);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* recipientlogin.html */
+#chooseorg {
+    color: #522700;
+    font-family: "Muli";
+    padding-top: 4px;
+    text-align: left;
+    padding-left: 15px;
+    display: inline-block;
+    width: 50%;
+    float: left;
+    margin-bottom: 50px;
+}
+
+#choosebutton {
+  margin-top: 80px;
+  font-size: 26px;
+  width: 130px;
+  height: 50px;
+  color: white;
+  background-color: #B73825;
+  border: 2px solid rgba(255, 255, 255, 0);
+  margin-left: 15px;
+}
+
+#recipientform {
+  border: 8px solid white;
+  padding-right: 30px;
+  padding-top: 40px;
+  padding-left: 30px;
+  padding-bottom: 120px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  border-style: double;
+  width: 600px;
+}
+
 /* recipient.html */
+#recipientcontent {
+  padding-top: 80px;
+  text-align: center;
+}
+
+#submitbutton {
+  font-size: 26px;
+  width: 130px;
+  height: 50px;
+  color: white;
+  background-color: #B73825;
+  border: 2px solid rgba(255, 255, 255, 0);
+  margin-top: 15px;
+}
+
+#writemessage, #readmessage {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+#donormessage {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+#mary {
+  font-size: 36px;
+  color: #B73825;
+}
+
+#textarea {
+  font-family: "Muli";
+  color: #522700;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#maryform {
+  border: 8px solid white;
+  padding-right: 10px;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  border-style: double;
+  width: 850px;
+  margin-top: 100px;
+}
+
+#welcome2 {
+    font-family: "Arvo";
+    font-size: 20px;
+}
+
+/* thankyou.html */
+#backhome {
+  font-size: 26px;
+  width: 140px;
+  height: 60px;
+  color: white;
+  background-color: #B73825;
+  border: 2px solid rgba(255, 255, 255, 0);
+  margin-top: 15px;
+}
+
+/* donate.html */
+#chooseanorg {
+  font-size: 24px;
+  font-family: "Arvo";
+}
+
+#donateform {
+  border: 8px solid white;
+  padding-right: 10px;
+  padding-top: 15px;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  border-style: double;
+  width: 1000px;
+  margin-top: 10px;
+}
+
+#chooseamt {
+  margin-top: 20px;
+}
+
+#donateheader {
+  color: #B73825;
+  font-size: 40px;
+}
+
+#submitbutton2 {
+  font-size: 24px;
+  width: 120px;
+  height: 45px;
+  color: white;
+  background-color: #B73825;
+  border: 2px solid rgba(255, 255, 255, 0);
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* impact.html */
+#web {
+  width: 1280px;
+}
+
+/* Sleep Soundly: This is an app / website that notifies people of what shelters have spaces available, so that it is much easier for them to find a place to stay. */
