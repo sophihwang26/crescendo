@@ -14,14 +14,15 @@ body{
   background-color: #1a535c;
   transition: 0.25s;
   overflow-x: hidden;
-  padding-top: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   white-space: nowrap;
 }
 
 .sidebar a {
-  padding: 8px 8px 8px 32px;
+  padding: 8px 8px 8px 30px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 23px;
   color: #4ecdc4;
   display: block;
 }
@@ -34,7 +35,6 @@ main .sidebar {
   position: absolute;
   top: 0;
   right: 25px;
-  font-size: 36px;
   margin-left: 50px;
 }
 
@@ -63,6 +63,10 @@ main .sidebar {
   }
 }
 
+#bottomMenu {
+  margin-top: 90px;
+}
+
 /* DIVIDER */
 
 .center {
@@ -72,13 +76,14 @@ main .sidebar {
 a.anchor {
   display: block;
   position: relative;
-  top: -83px;
   visibility: hidden;
 }
 
 h1 {
   padding-top: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
+  font-size: 40px;
+  color: #1a535c;
 }
 
 #headerImg {
