@@ -1,30 +1,155 @@
 <!DOCTYPE HTML>
 
 <html>
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+<title>UW ACM</title>
+<link rel="stylesheet" href="bootstrap-4.2.1-dist/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="additional-css.css" />
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link href="style.css" type="text/css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+  }
 
-    <title>give - Home Page</title>
-    <link rel="stylesheet" id="smooth_slider_headcss-css" type="text/css" media="all">
-  </head>
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
 
-  <body>
-    <header>
-    </header>
+<body>
+<!--Nav Bar-->
+  <!-- <a class="navbar-brand" href="index.html#"><img src="images/TransparentHusky.png" height="55px" width=auto
+      id="husky-navbar"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button> -->
 
-    <section class="content">
-        <img id="logo" src="./Resources/logo.PNG" alt="logo">
-        <h3 id="question">Are you a...</h3>
-        <button onclick="location.href='donorlogin.html'" type="button" id="introbutton">Donor</button>
-        <button onclick="location.href='recipientlogin.html'" type="button" id="introbutton">Recipient</button>
-    </section>
-  </body>
+  <div id="mySidebar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
+    <a href="#"><span><i class="material-icons">info</i><span class="icon-text">about</span></a><br>
+    <a href="#"><span><i class="material-icons">spa</i><span class="icon-text"></span>services</a></span>
+    </a><br>
+    <a href="#"><span><i class="material-icons">monetization_on</i><span class="icon-text"></span>clients</span></a><br>
+    <a href="#"><span><i class="material-icons">email</i><span class="icon-text"></span>contact<span></a>
+  </div>
+
+<!-- Picture Slidey -->
+<!--
+<header>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-caption d-none d-md-block overlay">
+        <h2 class="display-4">ACM @ University of Washington</h2>
+        <p class="lead" style="font-size: 1.25rem">A student organization dedicated to improving the experience of students within <br /> the Paul G. Allen School of Computer Science & Engineering.</p>
+      </div>
+      <div class="carousel-item active" style="background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url('images/springbbq.jpg')">
+      </div>
+      <div class="carousel-item" style="background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url('images/fallfest.jpg')">
+      </div>
+    </div>
+    <a class="carousel-control-prev" id="carousel-control" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+    <a class="carousel-control-next" id="carousel-control" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+  </div>
+</header>
+-->
+
+<div id="main">
+<!-- About Us -->
+<div class="container">
+  <a id="about" class="anchor"></a>
+  <h1 class="center">
+    Artist Dashboard
+  </h1>
+
+
+  <!-- Events -->
+    <a id="resources main" class="anchor"></a>
+      <div class="row center" style="padding: 0px 0px 20px 0px">
+
+        <!-- Card 1 -->
+        <div class="col-lg-4 card-container" id="event-card">
+            <div class="front" id="front0">
+              <h2 id="card-title">Departmental Socials</h2>
+              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
+                <div class="card-img" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url('images/events/departmentalsocials.jpg')">
+                  <button class="button-card" onclick="showBack(0)">
+                  </button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-lg-4 card-container" id="event-card">
+            <div class="front" id="front1">
+              <h2 id="card-title">Big / Little Mentorship</h2>
+              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
+                <div class="card-img" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url('images/events/biglittle.jpg')">
+                  <button class="button-card" onclick="showBack(1)">
+                  </button>
+                </div>
+              </div>
+            </div>
+        </div>
+  </div>
+
+</div>
+
+<!-- Contact -->
+<div class="container">
+<a id="contact" class="anchor"></a>
+<h1>
+  <div class="center">Contact</div>
+</h1>
+<div class="section center">
+  <h5>Stay connected with ACM!</h5>
+  <a target="_blank" href="https://tinyurl.com/acmMailingList2021"><img src="images/emailicon.png" class="resourceImg" id="emailIcon"></a>
+  <a target="_blank" href="https://www.facebook.com/uwacm/"><img src="images/facebooklogo.png" class="resourceImg"></a>
+  <a target="_blank" href="https://www.instagram.com/uwacm/"><img src="images/instalogo.jpeg" class="resourceImg"></a>
+  <a target="_blank" href="https://medium.com/uwacm/"><img src="images/mediumlogo.png" class="resourceImg"></a>
+  <a target="_blank" href="https://uw-cse-ugrad.slack.com/"><img src="images/slacklogo.png" class="resourceImg"></a>
+  <br>(Note: the Slack channel requires a @cs.washington.edu account)
+  <p></p>
+  For any questions or comments, please contact us at <a
+    href="mailto:acm-officers@cs.washington.edu">acm-officers@cs.washington.edu</a>.
+</div>
+<p></p>
+</div>
+
+<div class="center">© 2020 Sophia Hwang, Lucy Jiang, and Justin Ong</div>
+
+</div>
+</body>
 </html>
+
+<script>
+
+var mini = true;
+
+function toggleSidebar() {
+  if (mini) {
+    console.log("opening sidebar");
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    this.mini = false;
+  } else {
+    console.log("closing sidebar");
+    document.getElementById("mySidebar").style.width = "85px";
+    document.getElementById("main").style.marginLeft = "85px";
+    this.mini = true;
+  }
+}
+
+</script>
