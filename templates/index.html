@@ -5,6 +5,7 @@
 <title>Crescendo</title>
 <link rel="stylesheet" href="../static/bootstrap-4.2.1-dist/css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="../static/additional-css.css" />
+<link href="https://fonts.googleapis.com/css?family=Nunito:wght@600" rel="stylesheet">
 <style>
   html {
     scroll-behavior: smooth;
@@ -19,16 +20,9 @@
 </head>
 
 <body>
-<!--Nav Bar-->
-  <!-- <a class="navbar-brand" href="index.html#"><img src="images/TransparentHusky.png" height="55px" width=auto
-      id="husky-navbar"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
-    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button> -->
 
     <div id="mySidebar" class="sidebar">
-      <a href="index.html" id="topMenu" style="font-size:26px"><span><i class="material-icons">asfd</i><span class="icon-text"></span>Crescendo</span></a><br>
+      <a href="index.html" id="topMenu" style="font-size:26px; font-weight:600"><span><i class="material-icons">asfd</i><span class="icon-text"></span>Crescendo</span></a><br>
 
       <a href="#" id="topMenu"><span><i class="material-icons">songs</i><span class="icon-text"></span>Songs</span></a>
       <a href="#" id="topMenu"><span><i class="material-icons">playlists</i><span class="icon-text"></span>Playlists</a></span></a>
@@ -38,36 +32,6 @@
 
       <a href="dashboard.html" id="bottomMenu"><span><i class="material-icons">dashboard</i><span class="icon-text"></span>Artist Dashboard<span></a>
     </div>
-
-<!-- Picture Slidey -->
-<!--
-<header>
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-      <div class="carousel-caption d-none d-md-block overlay">
-        <h2 class="display-4">ACM @ University of Washington</h2>
-        <p class="lead" style="font-size: 1.25rem">A student organization dedicated to improving the experience of students within <br /> the Paul G. Allen School of Computer Science & Engineering.</p>
-      </div>
-      <div class="carousel-item active" style="background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url('images/springbbq.jpg')">
-      </div>
-      <div class="carousel-item" style="background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url('images/fallfest.jpg')">
-      </div>
-    </div>
-    <a class="carousel-control-prev" id="carousel-control" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-    <a class="carousel-control-next" id="carousel-control" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-  </div>
-</header>
--->
 
 <div id="main">
 <!-- About Us -->
@@ -159,12 +123,11 @@
         <!-- Card 1 -->
         <div class="col-sm-3 card-container" id="discover-card">
             <div class="front" id="front0">
-              <h2 id="card-title">Your Music</h2>
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
-                <div class="card-img-top" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url('images/events/departmentalsocials.jpg')"></div>
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                <h3 class="card-title">Song title</h3>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
               </div>
             </div>
         </div>
