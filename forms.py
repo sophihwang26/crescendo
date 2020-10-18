@@ -4,3 +4,6 @@ class MusicSearchForm(Form):
     choices = [('Artist', 'Artist')]
     select = SelectField('Search for music:', choices=choices)
     search = StringField('')
+
+class CategoryForm(Form):
+    choice = StringField()
