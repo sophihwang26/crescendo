@@ -556,6 +556,15 @@ td {
   border-radius: 15px;
 }
 
+.discover-front {
+ height: 400px;
+ grid-area: frontAndBack;
+  background-color: #4ecdc4;
+  color: white;
+  text-align: center;
+  border-radius: 15px;
+}
+
 #card-title {
   padding-top: 20px;
 }
@@ -577,7 +586,7 @@ td {
 
 .crescendoLogo {
   width: 220px;
-  height: 100;
+  height: auto;
   text-align: center;
 }
 
@@ -590,7 +599,7 @@ td a {
 }
 
 .modal-backdrop {
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: -1 !important;
@@ -599,16 +608,5 @@ td a {
   background-color: #1a535c !important;
 }
 
-.modal-content  {
-    -webkit-border-radius: 15px !important;
-    -moz-border-radius: 15px !important;
-    border-radius: 15px !important;
-}
-
-.modal-dialog {
-    -webkit-border-radius: 15px !important;
-    -moz-border-radius: 15px !important;
-    border-radius: 15px !important;
-}
 
 .modal { background: rgba(000, 000, 000, 0.8); min-height:1000000px; }

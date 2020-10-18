@@ -3,19 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c28ccbc8-29e3-4036-aeeb-70f221d1634c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/additional-css.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/additional-css.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/bootstrap-4.2.1-dist/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/bootstrap-4.2.1-dist/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/creator/manageCommunity.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/creator/manageCommunity.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/creator/manageRequests.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/creator/manageRequests.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/creator/stat.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/creator/stat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/creator/yourMusic.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/creator/yourMusic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/listener/artists.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/listener/artists.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/listener/community.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/listener/community.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/listener/playlists.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/listener/playlists.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/listener/requests.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/listener/requests.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/listener/songs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/listener/songs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,10 +14,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
+            <state relative-caret-position="81">
               <caret line="27" column="31" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="31" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -46,6 +35,29 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="204" column="22" lean-forward="true" selection-start-line="204" selection-start-column="22" selection-end-line="204" selection-end-column="22" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/additional-css.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="563" column="21" lean-forward="true" selection-start-line="563" selection-start-column="21" selection-end-line="563" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -57,6 +69,7 @@
       <find>song</find>
       <find>card</find>
       <find>modal</find>
+      <find>discover-card</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -66,9 +79,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/templates/music.html" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/static/bootstrap-4.2.1-dist/css/bootstrap.css" />
-        <option value="$PROJECT_DIR$/static/additional-css.css" />
         <option value="$PROJECT_DIR$/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/templates/creator/manageRequests.html" />
         <option value="$PROJECT_DIR$/app.py" />
@@ -80,6 +91,8 @@
         <option value="$PROJECT_DIR$/templates/creator/manageCommunity.html" />
         <option value="$PROJECT_DIR$/templates/creator/stat.html" />
         <option value="$PROJECT_DIR$/templates/creator/yourMusic.html" />
+        <option value="$PROJECT_DIR$/static/additional-css.css" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
       </list>
     </option>
   </component>
@@ -191,7 +204,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.35301206" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3686747" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -240,23 +253,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
           <caret line="5692" column="16" lean-forward="true" selection-start-line="5692" selection-start-column="16" selection-end-line="5692" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/additional-css.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1033">
-          <caret line="579" column="13" selection-start-line="579" selection-start-column="13" selection-end-line="579" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="141" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="28" selection-end-column="141" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -414,7 +410,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
+        <state relative-caret-position="81">
           <caret line="27" column="31" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="31" />
           <folding>
             <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -427,6 +423,25 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/additional-css.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="563" column="21" lean-forward="true" selection-start-line="563" selection-start-column="21" selection-end-line="563" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="204" column="22" lean-forward="true" selection-start-line="204" selection-start-column="22" selection-end-line="204" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
