@@ -3,14 +3,12 @@
 <html>
 <head>
 <title>Crescendo</title>
-<link rel="stylesheet" href="../static/bootstrap-4.2.1-dist/css/bootstrap.min.css" />
-<link rel="stylesheet" type="text/css" href="../static/additional-css.css" />
+<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-4.2.1-dist/css/bootstrap.min.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='additional-css.css') }}" />
 <link href="https://fonts.googleapis.com/css?family=Nunito:wght@600" rel="stylesheet">
 <style>
   html {
     scroll-behavior: smooth;
-  }
-
   }
 
 </style>
