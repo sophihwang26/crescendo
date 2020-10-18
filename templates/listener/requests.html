@@ -10,7 +10,8 @@
   html {
     scroll-behavior: smooth;
   }
-
+.topnav input[type=text] {
+    border: 1px solid #ccc;
   }
 
 </style>
@@ -37,74 +38,80 @@
 <!-- About Us -->
 <div class="container">
   <a id="about" class="anchor"></a>
-  <h1 class="heading">Artist Dashboard</h1>
+  <h1 class="heading">Requests</h1>
 
-  <!-- Events -->
+  <!-- Recently Added -->
+  <h2 class="heading">Your Submitted Requests</h2>
     <a id="resources main" class="anchor"></a>
-      <div class="row center" style="padding: 0px 0px 20px 0px">
+
+      <div class="row center discover" style="padding: 0px 0px 20px 0px">
 
         <!-- Card 1 -->
-        <div class="col-sm-6 card-container" id="event-card">
-            <div class="front-dashboard" id="front0">
-              <h2 id="card-title-dash">Your Music</h2>
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(26, 83, 92, 0.95), 30%)">
-                <div class="card-img" style="background-image: url('../../static/assets/Music Playlist.png'); background-position: calc(100%) calc(100% + 1.2rem)">
-                  <button class="button-card" onclick="location.href='creator/yourMusic.html'">
-                  </button>
+        <div class="col-sm-3 card-container" id="discover-card">
+            <div class="discover-front" id="front0">
+              <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
+                <div class="card-body">
+                  <img class="card-img-top" id="squareCrop" src="../static/assets/leroy.jpg" alt="Card image cap">
+                  <div id="song-text">
+                    <h4 class="song-title">Cover a Song</h4>
+                    <p class="song-artist">You requested for Leroy Sanchez to cover <i>I'll Make a Man Out of You</i> from Mulan (the original).</p>
+                    <p class="song-artist"><b>Submitted 2 days ago</b></p>
+                  </div>
                 </div>
               </div>
             </div>
         </div>
 
         <!-- Card 2 -->
-        <div class="col-sm-6 card-container" id="event-card">
-            <div class="front-dashboard" id="front1">
-              <h2 id="card-title-dash">Insights</h2>
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
-                <div class="card-img" style="background-image: url('../../static/assets/Stats.png'); background-position: calc(100%) calc(100% + 0.9rem)">
-                  <button class="button-card" onclick="location.href='creator/stats.html'">
-                  </button>
+        <div class="col-sm-3 card-container" id="discover-card">
+            <div class="discover-front" id="front0">
+              <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
+                <div class="card-body">
+                  <img class="card-img-top" id="squareCrop" src="../static/assets/kina.jpg" alt="Card image cap">
+                  <div id="song-text">
+                    <h4 class="song-title">Happy Birthday Message</h4>
+                    <p class="song-artist">You requested for Kina Grannis to wish your best friend happy birthday.</p>
+                    <p class="song-artist"><b>Submitted 2 days ago</b></p>
+                  </div>
                 </div>
               </div>
             </div>
         </div>
+
+        <!-- Card 3 -->
+        <div class="col-sm-3 card-container" id="discover-card">
+            <div class="discover-front" id="front0">
+              <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
+                <div class="card-body">
+                  <img class="card-img-top" id="squareCrop" src="../static/assets/tangy.jpg" alt="Card image cap">
+                  <div id="song-text">
+                    <h4 class="song-title">Music & Dance Challenge</h4>
+                    <p class="song-artist">You requested for Andrew Tang to do the Savage Love dance challenge.</p>
+                    <p class="song-artist"><b>Submitted 3 days ago</b></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-sm-3 card-container" id="discover-card">
+            <div class="discover-front" id="front0">
+              <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
+                <div class="card-body">
+                  <img class="card-img-top" id="squareCrop" src="../static/assets/umi.jpg" alt="Card image cap">
+                  <div id="song-text">
+                    <h4 class="song-title">Cover a Song</h4>
+                    <p class="song-artist">You requested for UMI to cover <i>Almost is Never Enough</i> by Ariana Grande and Nathan Sykes.</p>
+                    <p class="song-artist"><b>Submitted 5 days ago</b></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
       </div>
-
-      <div class="row center" style="padding: 0px 0px 20px 0px">
-
-        <!-- Card 1 -->
-        <div class="col-sm-6 card-container" id="event-card">
-            <div class="front-dashboard" id="front0">
-              <h2 id="card-title-dash">Community</h2>
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
-                <div class="card-img" style="background-image: url('../../static/assets/Community.png'); background-position: calc(100%) calc(100% + 0.9rem)">
-                  <button class="button-card" onclick="location.href='creator/manageCommunity.html'">
-                  </button>
-                </div>
-              </div>
-            </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="col-sm-6 card-container" id="event-card">
-            <div class="front-dashboard" id="front1">
-              <h2 id="card-title-dash">Requests</h2>
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
-                <div class="card-img" style="background-image: url('../../static/assets/Personal Requests.png'); background-position: calc(100%) calc(100% + 1.5rem)">
-                  <button class="button-card" onclick="location.href='creator/manageRequests.html'">
-                  </button>
-                </div>
-              </div>
-            </div>
-        </div>
-      </div>
-
-      <!-- <script>
-      function goToMusic(button) {
-        location.href="";
-      }
-      </script> -->
-</div>
 
 
 <div class="center"><br>© 2020 Sophia Hwang, Lucy Jiang, and Justin Ong</div>

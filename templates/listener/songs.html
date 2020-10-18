@@ -22,7 +22,7 @@
   <div id="mySidebar" class="sidebar">
     <a href="{{ url_for('index') }}" id="topMenu" style="font-size:26px; font-weight:600"><img alt="Crescendo logo" src='../static/assets/crescendo_logo.png' class="crescendoLogo"></a><br>
 
-    <a href="{{ url_for('index') }}" id="topMenu" class="activeLink"><img alt="songs" src='../static/assets/songs-icon.png' class="menuicon">Songs</span></a>
+    <a href="#" id="topMenu" class="activeLink"><img alt="songs" src='../static/assets/songs-icon.png' class="menuicon">Songs</span></a>
     <a href="{{ url_for('playlists') }}" id="topMenu"><img alt="songs" src='../static/assets/playlist-icon.png' class="menuicon">Playlists</a></span></a>
     <a href="{{ url_for('artists') }}" id="topMenu"><img alt="songs" src='../static/assets/mic-icon.png' class="menuicon">Artists</span></a>
     <a href="{{ url_for('community') }}" id="topMenu"><img alt="songs" src='../static/assets/group-icon.png' class="menuicon">Community<span></a>
@@ -35,73 +35,119 @@
 <!-- About Us -->
 <div class="container">
   <a id="about" class="anchor"></a>
-  <h1 class="heading">Artist Dashboard</h1>
+  <h1 class="heading">Discover</h1>
 
-  <!-- Events -->
+  <!-- Filter by -->
+
+  <div class="pill-nav">
+    <span id="navLabels">Filter by:</span>
+
+    <span>
+    <input type="checkbox" id="activate-div1" class="checkstyle" hidden>
+      <label for="activate-div1">
+       <div class="my-div">
+          Location
+       </div>
+      </label>
+    </span>
+
+    <span>
+    <input type="checkbox" id="activate-div2" class="checkstyle" hidden>
+      <label for="activate-div2">
+       <div class="my-div">
+          Artist
+       </div>
+      </label>
+    </span>
+
+    <span>
+    <input type="checkbox" id="activate-div3" class="checkstyle" hidden>
+      <label for="activate-div3">
+       <div class="my-div">
+          Album
+       </div>
+      </label>
+    </span>
+
+    <span>
+    <input type="checkbox" id="activate-div4" class="checkstyle" hidden>
+      <label for="activate-div4">
+       <div class="my-div">
+          Beats per Minute
+       </div>
+      </label>
+    </span>
+
+      <br>
+
+      <form action="/" method="post">
+          <label for="category" id="navLabels">Choose a category:  </label>
+          <select name="category">
+            {% for i, href in categories %}
+                <option value="{{ href }}">{{ i }}</option>
+            {% endfor %}
+          </select>      <input type="submit" value="Submit">
+        </form>
+        <h2>{{ cat }}</h2>
+  </div>
+
+​<hr />​​​​​​​​​​​​​​​​​​​
+
+  <!-- Recently Added -->
+  <h2 class="heading">Recently Added</h2>
     <a id="resources main" class="anchor"></a>
-      <div class="row center" style="padding: 0px 0px 20px 0px">
-
+      <div class="row center discover" style="padding: 0px 0px 20px 0px">
+        {% for i in recent_models %}
+            <div class="col-sm-3 card-container" id="discover-card">
+                <div class="discover-front" id="front0">
+                  <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
+                    <div class="card-body">
+                      <img class="card-img-top" src="{{ i.cover_art }}" alt="Card image cap">
+                      <div id="song-text">
+                        <h4 class="song-title">{{ i.track }}</h4>
+                        <p class="song-artist">{{ i.id }}</p>
+                        <audio controls style="width: 100%">
+                            <source src="{{ i.audio }}" type="audio/mp3">
+                        </audio>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        {% endfor %}
         <!-- Card 1 -->
-        <div class="col-sm-6 card-container" id="event-card">
-            <div class="front-dashboard" id="front0">
-              <h2 id="card-title-dash">Your Music</h2>
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(26, 83, 92, 0.95), 30%)">
-                <div class="card-img" style="background-image: url('../static/assets/Music Playlist.png'); background-position: calc(100%) calc(100% + 30px)">
-                  <button class="button-card" onclick="location.href='creator/yourMusic.html'">
-                  </button>
-                </div>
-              </div>
-            </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="col-sm-6 card-container" id="event-card">
-            <div class="front-dashboard" id="front1">
-              <h2 id="card-title-dash">Insights</h2>
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
-                <div class="card-img" style="background-image: url('../static/assets/Stats.png'); background-position: calc(100%) calc(100% + 30px)">
-                  <button class="button-card" onclick="location.href='creator/stats.html'">
-                  </button>
-                </div>
-              </div>
-            </div>
-        </div>
       </div>
 
-      <div class="row center" style="padding: 0px 0px 20px 0px">
+      ​<hr />​​​​​​​​​​​​​​​​​​​
 
-        <!-- Card 1 -->
-        <div class="col-sm-6 card-container" id="event-card">
-            <div class="front-dashboard" id="front0">
-              <h2 id="card-title-dash">Community</h2>
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
-                <div class="card-img" style="background-image: url('../static/assets/Community.png'); background-position: calc(100%) calc(100% + 20px)">
-                  <button class="button-card" onclick="location.href='creator/manageCommunity.html'">
-                  </button>
+      <!-- Top Tracks -->
+      <h2 class="heading">Top Tracks</h2>
+        <a id="resources main" class="anchor"></a>
+          <div class="row center discover" style="padding: 0px 0px 20px 0px">
+
+            <!-- Card 1 -->
+            {% for i in tracks_models %}
+                <div class="col-sm-3 card-container" id="discover-card">
+                    <div class="discover-front" id="front0">
+                      <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
+                        <div class="card-body">
+                          <img class="card-img-top" src="{{ i.cover_art }}" alt="Card image cap">
+                          <div id="song-text">
+                            <h4 class="song-title">{{ i.track }}</h4>
+                            <p class="song-artist">{{ i.id }}</p>
+                            <audio controls style="width: 100%">
+                                <source src="{{ i.audio }}" type="audio/mp3">
+                            </audio>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-        </div>
+            {% endfor %}
 
-        <!-- Card 2 -->
-        <div class="col-sm-6 card-container" id="event-card">
-            <div class="front-dashboard" id="front1">
-              <h2 id="card-title-dash">Requests</h2>
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
-                <div class="card-img" style="background-image: url('../static/assets/Personal Requests.png'); background-position: calc(100%) calc(100% + 20px)">
-                  <button class="button-card" onclick="location.href='{{ url_for('manageRequests') }}'">
-                  </button>
-                </div>
-              </div>
-            </div>
-        </div>
-      </div>
 
-      <!-- <script>
-      function goToMusic(button) {
-        location.href="";
-      }
-      </script> -->
+          </div>
+
 </div>
 
 
