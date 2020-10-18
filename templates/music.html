@@ -3,8 +3,8 @@
 <html>
 <head>
 <title>Crescendo</title>
-<link rel="stylesheet" href={{ url_for('static', filename='bootstrap-4.2.1-dist/css/bootstrap.min.css') }}" />
-<link rel="stylesheet" type="text/css" href={{ url_for('static', filename='additional-css.css') }} />
+<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-4.2.1-dist/css/bootstrap.min.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='additional-css.css') }}" />
 <style>
   html {
     scroll-behavior: smooth;
@@ -28,13 +28,13 @@
   </button> -->
 
   <div id="mySidebar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
-    <a href="#"><span><i class="material-icons">asfd</i><span class="icon-text"></span>Crescendo</span></a><br><br>
+    <a href="{{ url_for('index')}}" ><span><i class="material-icons">asfd</i><span class="icon-text"></span>Crescendo</span></a><br><br>
     <a href="#"><span><i class="material-icons">info</i><span class="icon-text"></span>about</span></a><br>
     <a href="#"><span><i class="material-icons">spag</i><span class="icon-text"></span>services</a></span></a><br>
     <a href="#"><span><i class="material-icons">mone</i><span class="icon-text"></span>clients</span></a><br>
     <a href="#"><span><i class="material-icons">emai</i><span class="icon-text"></span>contact<span></a>
 
-    <a href="dashboard.html" id="bottomMenu"><span><i class="material-icons">emai</i><span class="icon-text"></span>contact<span></a>
+    <a href="{{ url_for('dashboard')}}" id="bottomMenu"><span><i class="material-icons">emai</i><span class="icon-text"></span>contact<span></a>
   </div>
 
 <div id="main">
