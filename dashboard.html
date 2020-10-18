@@ -27,12 +27,16 @@
     <span class="navbar-toggler-icon"></span>
   </button> -->
 
-  <div id="mySidebar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
-    <a href="#"><span><i class="material-icons">asfd</i><span class="icon-text"></span>Crescendo</span></a><br><br>
-    <a href="#"><span><i class="material-icons">info</i><span class="icon-text"></span>about</span></a><br>
-    <a href="#"><span><i class="material-icons">spag</i><span class="icon-text"></span>services</a></span></a><br>
-    <a href="#"><span><i class="material-icons">mone</i><span class="icon-text"></span>clients</span></a><br>
-    <a href="#"><span><i class="material-icons">emai</i><span class="icon-text"></span>contact<span></a>
+  <div id="mySidebar" class="sidebar">
+    <a href="index.html" id="topMenu" style="font-size:26px"><span><i class="material-icons">asfd</i><span class="icon-text"></span>Crescendo</span></a><br>
+
+    <a href="#" id="topMenu"><span><i class="material-icons">songs</i><span class="icon-text"></span>Songs</span></a>
+    <a href="#" id="topMenu"><span><i class="material-icons">playlists</i><span class="icon-text"></span>Playlists</a></span></a>
+    <a href="#" id="topMenu"><span><i class="material-icons">artists</i><span class="icon-text"></span>Artists</span></a>
+    <a href="#" id="topMenu"><span><i class="material-icons">requests</i><span class="icon-text"></span>Requests<span></a>
+    <a href="#" id="topMenu"><span><i class="material-icons">community</i><span class="icon-text"></span>Community<span></a>
+
+    <a href="dashboard.html" id="bottomMenu"><span><i class="material-icons">dashboard</i><span class="icon-text"></span>Artist Dashboard<span></a>
   </div>
 
 <!-- Picture Slidey -->
@@ -69,7 +73,7 @@
 <!-- About Us -->
 <div class="container">
   <a id="about" class="anchor"></a>
-  <h1 class="center">Artist Dashboard</h1>
+  <h1 class="heading">Artist Dashboard</h1>
 
 
   <!-- Events -->
@@ -134,49 +138,12 @@
 
 </div>
 
-<!-- Contact -->
-<div class="container">
-<a id="contact" class="anchor"></a>
-<h1>
-  <div class="center">Contact</div>
-</h1>
-<div class="section center">
-  <h5>Stay connected with ACM!</h5>
-  <a target="_blank" href="https://tinyurl.com/acmMailingList2021"><img src="images/emailicon.png" class="resourceImg" id="emailIcon"></a>
-  <a target="_blank" href="https://www.facebook.com/uwacm/"><img src="images/facebooklogo.png" class="resourceImg"></a>
-  <a target="_blank" href="https://www.instagram.com/uwacm/"><img src="images/instalogo.jpeg" class="resourceImg"></a>
-  <a target="_blank" href="https://medium.com/uwacm/"><img src="images/mediumlogo.png" class="resourceImg"></a>
-  <a target="_blank" href="https://uw-cse-ugrad.slack.com/"><img src="images/slacklogo.png" class="resourceImg"></a>
-  <br>(Note: the Slack channel requires a @cs.washington.edu account)
-  <p></p>
-  For any questions or comments, please contact us at <a
-    href="mailto:acm-officers@cs.washington.edu">acm-officers@cs.washington.edu</a>.
-</div>
-<p></p>
-</div>
 
-<div class="center">© 2020 Sophia Hwang, Lucy Jiang, and Justin Ong</div>
+<div class="center"><br>© 2020 Sophia Hwang, Lucy Jiang, and Justin Ong</div>
 
-</div>
 </body>
 </html>
 
 <script>
-
-var mini = true;
-
-function toggleSidebar() {
-  if (mini) {
-    console.log("opening sidebar");
-    document.getElementById("mySidebar").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-    this.mini = false;
-  } else {
-    console.log("closing sidebar");
-    document.getElementById("mySidebar").style.width = "85px";
-    document.getElementById("main").style.marginLeft = "85px";
-    this.mini = true;
-  }
-}
 
 </script>

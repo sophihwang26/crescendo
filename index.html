@@ -27,15 +27,17 @@
     <span class="navbar-toggler-icon"></span>
   </button> -->
 
-  <div id="mySidebar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
-    <a href="#"><span><i class="material-icons">asfd</i><span class="icon-text"></span>Crescendo</span></a><br><br>
-    <a href="#"><span><i class="material-icons">info</i><span class="icon-text"></span>about</span></a><br>
-    <a href="#"><span><i class="material-icons">spag</i><span class="icon-text"></span>services</a></span></a><br>
-    <a href="#"><span><i class="material-icons">mone</i><span class="icon-text"></span>clients</span></a><br>
-    <a href="#"><span><i class="material-icons">emai</i><span class="icon-text"></span>contact<span></a>
+    <div id="mySidebar" class="sidebar">
+      <a href="index.html" id="topMenu" style="font-size:26px"><span><i class="material-icons">asfd</i><span class="icon-text"></span>Crescendo</span></a><br>
 
-    <a href="dashboard.html" id="bottomMenu"><span><i class="material-icons">emai</i><span class="icon-text"></span>contact<span></a>
-  </div>
+      <a href="#" id="topMenu"><span><i class="material-icons">songs</i><span class="icon-text"></span>Songs</span></a>
+      <a href="#" id="topMenu"><span><i class="material-icons">playlists</i><span class="icon-text"></span>Playlists</a></span></a>
+      <a href="#" id="topMenu"><span><i class="material-icons">artists</i><span class="icon-text"></span>Artists</span></a>
+      <a href="#" id="topMenu"><span><i class="material-icons">requests</i><span class="icon-text"></span>Requests<span></a>
+      <a href="#" id="topMenu"><span><i class="material-icons">community</i><span class="icon-text"></span>Community<span></a>
+
+      <a href="dashboard.html" id="bottomMenu"><span><i class="material-icons">dashboard</i><span class="icon-text"></span>Artist Dashboard<span></a>
+    </div>
 
 <!-- Picture Slidey -->
 <!--
@@ -71,15 +73,91 @@
 <!-- About Us -->
 <div class="container">
   <a id="about" class="anchor"></a>
-  <h1 class="center">Discover</h1>
+  <h1 class="heading">Discover</h1>
 
+  <!-- Filter by -->
 
-  <!-- Events -->
+  <div class="pill-nav">
+    <span id="navLabels">Filter by:</span>
+
+    <span>
+    <input type="checkbox" id="activate-div1" class="checkstyle" hidden>
+      <label for="activate-div1">
+       <div class="my-div">
+          Map
+       </div>
+      </label>
+    </span>
+
+    <span>
+    <input type="checkbox" id="activate-div2" class="checkstyle" hidden>
+      <label for="activate-div2">
+       <div class="my-div">
+          Song / Album
+       </div>
+      </label>
+    </span>
+
+    <span>
+    <input type="checkbox" id="activate-div3" class="checkstyle" hidden>
+      <label for="activate-div3">
+       <div class="my-div">
+          Song / Album
+       </div>
+      </label>
+    </span>
+
+      <br>
+
+    <span id="navLabels">Genre:</span>
+
+    <span>
+    <input type="checkbox" id="activate-div4" class="checkstyle" hidden>
+      <label for="activate-div4">
+       <div class="my-div">
+          Song / Album
+       </div>
+      </label>
+    </span>
+
+    <span>
+    <input type="checkbox" id="activate-div5" class="checkstyle" hidden>
+      <label for="activate-div5">
+       <div class="my-div">
+          Song / Album
+       </div>
+      </label>
+    </span>
+
+    <span>
+    <input type="checkbox" id="activate-div6" class="checkstyle" hidden>
+      <label for="activate-div6">
+       <div class="my-div">
+          Song / Album
+       </div>
+      </label>
+    </span>
+
+    <span>
+    <input type="checkbox" id="activate-div7" class="checkstyle" hidden>
+      <label for="activate-div7">
+       <div class="my-div">
+          Song / Album
+       </div>
+      </label>
+    </span>
+
+  </div>
+
+​<hr />​​​​​​​​​​​​​​​​​​​<br />
+
+  <!-- Recently Added -->
+  <h2 class="heading">Recently Added</h2>
     <a id="resources main" class="anchor"></a>
-      <div class="row center" style="padding: 0px 0px 20px 0px">
+      <div class="row center discover" style="padding: 0px 0px 20px 0px">
 
         <!-- Card 1 -->
-        <div class="col-sm-6 card-container" id="event-card">
+        <div class="col-sm-3 card-container" id="discover-card">
             <div class="front" id="front0">
               <h2 id="card-title">Your Music</h2>
               <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
@@ -92,7 +170,33 @@
         </div>
 
         <!-- Card 2 -->
-        <div class="col-sm-6 card-container" id="event-card">
+        <div class="col-sm-3 card-container" id="discover-card">
+            <div class="front" id="front1">
+              <h2 id="card-title">Insights</h2>
+              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
+                <div class="card-img" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url('images/events/biglittle.jpg')">
+                  <button class="button-card" onclick="showBack(1)">
+                  </button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- Card 1 -->
+        <div class="col-sm-3 card-container" id="discover-card">
+            <div class="front" id="front0">
+              <h2 id="card-title">Your Music</h2>
+              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
+                <div class="card-img" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url('images/events/departmentalsocials.jpg')">
+                  <button class="button-card" onclick="showBack(0)">
+                  </button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-sm-3 card-container" id="discover-card">
             <div class="front" id="front1">
               <h2 id="card-title">Insights</h2>
               <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
@@ -105,80 +209,74 @@
         </div>
       </div>
 
-      <div class="row center" style="padding: 0px 0px 20px 0px">
+      ​<hr />​​​​​​​​​​​​​​​​​​​<br />
 
-        <!-- Card 1 -->
-        <div class="col-sm-6 card-container" id="event-card">
-            <div class="front" id="front0">
-              <h2 id="card-title">Requests</h2>
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
-                <div class="card-img" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url('images/events/departmentalsocials.jpg')">
-                  <button class="button-card" onclick="showBack(0)">
-                  </button>
+      <!-- Top Tracks -->
+      <h2 class="heading">Top Tracks</h2>
+        <a id="resources main" class="anchor"></a>
+          <div class="row center discover" style="padding: 0px 0px 20px 0px">
+
+            <!-- Card 1 -->
+            <div class="col-sm-3 card-container" id="discover-card">
+                <div class="front" id="front0">
+                  <h2 id="card-title">Your Music</h2>
+                  <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
+                    <div class="card-img" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url('images/events/departmentalsocials.jpg')">
+                      <button class="button-card" onclick="showBack(0)">
+                      </button>
+                    </div>
+                  </div>
                 </div>
-              </div>
             </div>
-        </div>
 
-        <!-- Card 2 -->
-        <div class="col-sm-6 card-container" id="event-card">
-            <div class="front" id="front1">
-              <h2 id="card-title">Community</h2>
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
-                <div class="card-img" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url('images/events/biglittle.jpg')">
-                  <button class="button-card" onclick="showBack(1)">
-                  </button>
+            <!-- Card 2 -->
+            <div class="col-sm-3 card-container" id="discover-card">
+                <div class="front" id="front1">
+                  <h2 id="card-title">Insights</h2>
+                  <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
+                    <div class="card-img" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url('images/events/biglittle.jpg')">
+                      <button class="button-card" onclick="showBack(1)">
+                      </button>
+                    </div>
+                  </div>
                 </div>
-              </div>
             </div>
-        </div>
-      </div>
+
+            <!-- Card 1 -->
+            <div class="col-sm-3 card-container" id="discover-card">
+                <div class="front" id="front0">
+                  <h2 id="card-title">Your Music</h2>
+                  <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
+                    <div class="card-img" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url('images/events/departmentalsocials.jpg')">
+                      <button class="button-card" onclick="showBack(0)">
+                      </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-sm-3 card-container" id="discover-card">
+                <div class="front" id="front1">
+                  <h2 id="card-title">Insights</h2>
+                  <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
+                    <div class="card-img" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url('images/events/biglittle.jpg')">
+                      <button class="button-card" onclick="showBack(1)">
+                      </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
 
 </div>
 
-<!-- Contact -->
-<div class="container">
-<a id="contact" class="anchor"></a>
-<h1>
-  <div class="center">Contact</div>
-</h1>
-<div class="section center">
-  <h5>Stay connected with ACM!</h5>
-  <a target="_blank" href="https://tinyurl.com/acmMailingList2021"><img src="images/emailicon.png" class="resourceImg" id="emailIcon"></a>
-  <a target="_blank" href="https://www.facebook.com/uwacm/"><img src="images/facebooklogo.png" class="resourceImg"></a>
-  <a target="_blank" href="https://www.instagram.com/uwacm/"><img src="images/instalogo.jpeg" class="resourceImg"></a>
-  <a target="_blank" href="https://medium.com/uwacm/"><img src="images/mediumlogo.png" class="resourceImg"></a>
-  <a target="_blank" href="https://uw-cse-ugrad.slack.com/"><img src="images/slacklogo.png" class="resourceImg"></a>
-  <br>(Note: the Slack channel requires a @cs.washington.edu account)
-  <p></p>
-  For any questions or comments, please contact us at <a
-    href="mailto:acm-officers@cs.washington.edu">acm-officers@cs.washington.edu</a>.
-</div>
-<p></p>
-</div>
 
-<div class="center">© 2020 Sophia Hwang, Lucy Jiang, and Justin Ong</div>
+<div class="center"><br>© 2020 Sophia Hwang, Lucy Jiang, and Justin Ong</div>
 
-</div>
 </body>
 </html>
 
 <script>
-
-var mini = true;
-
-function toggleSidebar() {
-  if (mini) {
-    document.getElementById("main").style.marginLeft = "23%";
-    document.getElementById("mySidebar").style.width = "23%";
-    document.getElementById("mySidebar").style.display = "block";
-    this.mini = false;
-  } else {
-    console.log("closing sidebar");
-    document.getElementById("mySidebar").style.width = "85px";
-    document.getElementById("main").style.marginLeft = "85px";
-    this.mini = true;
-  }
-}
 
 </script>
