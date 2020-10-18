@@ -610,3 +610,8 @@ td a {
 
 
 .modal { background: rgba(000, 000, 000, 0.8); min-height:1000000px; }
+
+#artistProfile {
+  display:inline-block;
+  margin-right:10px;
+}
