@@ -35,73 +35,64 @@
 <!-- About Us -->
 <div class="container">
   <a id="about" class="anchor"></a>
-  <h1 class="heading">Artist Dashboard</h1>
+  <h1 class="heading">Playlists</h1>
 
-  <!-- Events -->
-    <a id="resources main" class="anchor"></a>
-      <div class="row center" style="padding: 0px 0px 20px 0px">
+  <!--  Table-->
+  <h2 class="heading">Recently Edited</h2>
+    <div class="requesttable">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col" style="font-size: 18px; background-color:#1a535c; color:white">#</th>
+            <th scope="col" style="font-size: 18px; background-color:#1a535c; color:white">Playlist Name</th>
+            <th scope="col" style="font-size: 18px; background-color:#1a535c; color:white">Number of Songs</th>
+            <th scope="col" style="font-size: 18px; background-color:#1a535c; color:white">Plays</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Button trigger modal -->
 
-        <!-- Card 1 -->
-        <div class="col-sm-6 card-container" id="event-card">
-            <div class="front-dashboard" id="front0">
-              <h2 id="card-title-dash">Your Music</h2>
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(26, 83, 92, 0.95), 30%)">
-                <div class="card-img" style="background-image: url('../static/assets/Music Playlist.png'); background-position: calc(100%) calc(100% + 30px)">
-                  <button class="button-card" onclick="location.href='creator/yourMusic.html'">
-                  </button>
-                </div>
-              </div>
-            </div>
-        </div>
+          <tr class="clickable-row" >
+              <th scope="row"><a data-toggle="modal" data-target="#exampleModal">1</a></th>
+              <td><a data-toggle="modal" data-target="#exampleModal">Favorites 🤩 Since March 😷</a></td>
+              <td><a data-toggle="modal" data-target="#exampleModal">53</a></td>
+              <td><a data-toggle="modal" data-target="#exampleModal">105</a></td>
+          </tr>
+          <tr class="clickable-row" >
+              <th scope="row"><a data-toggle="modal" data-target="#exampleModal">2</a></th>
+              <td><a data-toggle="modal" data-target="#exampleModal">Shower Karaoke 🚿 = 🎤</a></td>
+              <td><a data-toggle="modal" data-target="#exampleModal">6</a></td>
+              <td><a data-toggle="modal" data-target="#exampleModal">975</a></td>
+          </tr>
+          <tr class="clickable-row" >
+              <th scope="row"><a data-toggle="modal" data-target="#exampleModal">3</a></th>
+              <td><a data-toggle="modal" data-target="#exampleModal">Spooky Season 🎃️</a></td>
+              <td><a data-toggle="modal" data-target="#exampleModal">13</a></td>
+              <td><a data-toggle="modal" data-target="#exampleModal">51</a></td>
+          </tr>
+          <tr class="clickable-row" >
+              <th scope="row"><a data-toggle="modal" data-target="#exampleModal">4</a></th>
+              <td><a data-toggle="modal" data-target="#exampleModal">🍃 Feels Like Fall 🍂</a></td>
+              <td><a data-toggle="modal" data-target="#exampleModal">81</a></td>
+              <td><a data-toggle="modal" data-target="#exampleModal">44</a></td>
+          </tr>
+          <tr class="clickable-row" >
+              <th scope="row"><a data-toggle="modal" data-target="#exampleModal">5</a></th>
+              <td><a data-toggle="modal" data-target="#exampleModal">🏠 Music</a></td>
+              <td><a data-toggle="modal" data-target="#exampleModal">25</a></td>
+              <td><a data-toggle="modal" data-target="#exampleModal">7</a></td>
+          </tr>
+          <tr class="clickable-row" >
+              <th scope="row"><a data-toggle="modal" data-target="#exampleModal">6</a></th>
+              <td><a data-toggle="modal" data-target="#exampleModal">Cloudy Days ☁️</a></td>
+              <td><a data-toggle="modal" data-target="#exampleModal">28</a></td>
+              <td><a data-toggle="modal" data-target="#exampleModal">392</a></td>
+          </tr>
+        </tbody>
+    </table>
 
-        <!-- Card 2 -->
-        <div class="col-sm-6 card-container" id="event-card">
-            <div class="front-dashboard" id="front1">
-              <h2 id="card-title-dash">Insights</h2>
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
-                <div class="card-img" style="background-image: url('../static/assets/Stats.png'); background-position: calc(100%) calc(100% + 30px)">
-                  <button class="button-card" onclick="location.href='creator/stats.html'">
-                  </button>
-                </div>
-              </div>
-            </div>
-        </div>
-      </div>
+    </div>
 
-      <div class="row center" style="padding: 0px 0px 20px 0px">
-
-        <!-- Card 1 -->
-        <div class="col-sm-6 card-container" id="event-card">
-            <div class="front-dashboard" id="front0">
-              <h2 id="card-title-dash">Community</h2>
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
-                <div class="card-img" style="background-image: url('../static/assets/Community.png'); background-position: calc(100%) calc(100% + 20px)">
-                  <button class="button-card" onclick="location.href='creator/manageCommunity.html'">
-                  </button>
-                </div>
-              </div>
-            </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="col-sm-6 card-container" id="event-card">
-            <div class="front-dashboard" id="front1">
-              <h2 id="card-title-dash">Requests</h2>
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
-                <div class="card-img" style="background-image: url('../static/assets/Personal Requests.png'); background-position: calc(100%) calc(100% + 20px)">
-                  <button class="button-card" onclick="location.href='{{ url_for('manageRequests') }}'">
-                  </button>
-                </div>
-              </div>
-            </div>
-        </div>
-      </div>
-
-      <!-- <script>
-      function goToMusic(button) {
-        location.href="";
-      }
-      </script> -->
 </div>
 
 

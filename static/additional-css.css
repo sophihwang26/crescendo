@@ -369,6 +369,17 @@ td {
   font-size: 35px;
 }
 
+#card-title-artist {
+  font-weight: 900;
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0);
+  margin-top: 240px;
+  font-size: 35px;
+}
+
 .button-card {
   border: none;
   height: 100%;
@@ -615,4 +626,20 @@ td a {
 #artistProfile {
   display:inline-block;
   margin-right:10px;
+}
+
+#squareCrop {
+  width:190px !important;
+  height:190px !important;
+  background-size:cover;
+  background-position:center;
+  object-fit:cover;
+}
+
+#searchbar {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 500px;
+    height: 35px;
+    font-size: 18px;
 }

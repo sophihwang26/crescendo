@@ -133,7 +133,7 @@ def playlists():
 
 @app.route('/songs')
 def songs():
-    return render_template('listener/songs.html')
+    return render_template('index.html')
 
 @app.route('/artists')
 def artists():
