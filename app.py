@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request
-import os
 from forms import MusicSearchForm
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 from flask_sqlalchemy import SQLAlchemy
+import requests
+import random
 
 
 client_id = "99b4bc438bd34e57a55674a469249810"
@@ -15,41 +16,80 @@ app = Flask(__name__)
 db = SQLAlchemy(app)
 
 class RecentModel(db.Model):
-    id = db.Column(db.String(120), unique=False, nullable=False)
+    id = db.Column(db.String(120), unique=False, nullable=True)
     track = db.Column(db.String(120), primary_key=True)
-    audio = db.Column(db.String(120), unique=False, nullable=False)
-    cover_art = db.Column(db.String(120), unique=False, nullable=False)
+    audio = db.Column(db.String(120), unique=False, nullable=True)
+    cover_art = db.Column(db.String(120), unique=False, nullable=True)
 
     def __repr__(self):
         return '<Song %r>' % self.track
 
 class TopTracksModel(db.Model):
-    id = db.Column(db.String(120), unique=False, nullable=False)
+    id = db.Column(db.String(120), unique=False, nullable=True)
     track = db.Column(db.String(120), primary_key=True)
-    audio = db.Column(db.String(120), unique=False, nullable=False)
-    cover_art = db.Column(db.String(120), unique=False, nullable=False)
+    audio = db.Column(db.String(120), unique=False, nullable=True)
+    cover_art = db.Column(db.String(120), unique=False, nullable=True)
 
     def __repr__(self):
         return '<Song %r>' % self.track
 
 db.create_all()
-
-s1 = RecentModel(id="Led Zeppelin", track="Stairway to Heaven", audio="https://p.scdn.co/mp3-preview/8226164717312bc411f8635580562d67e191a754?cid=99b4bc438bd34e57a55674a469249810", cover_art="https://i.scdn.co/image/ab67616d0000b273c8a11e48c91a982d086afc69")
-s2 = RecentModel(id="Led Zeppelin", track="Whole Lotta Love", audio="https://p.scdn.co/mp3-preview/ce11b19a4d2de9976d7626df0717d0073863909c?cid=99b4bc438bd34e57a55674a469249810", cover_art="https://i.scdn.co/image/ab67616d0000b273fc4f17340773c6c3579fea0d")
-s3 = RecentModel(id="Led Zeppelin", track="Immigrant Song", audio="https://p.scdn.co/mp3-preview/8455599677a13017978dcd3f4b210937f0a16bcb?cid=99b4bc438bd34e57a55674a469249810", cover_art="https://i.scdn.co/image/ab67616d0000b27390a50cfe99a4c19ff3cbfbdb")
-s4 = RecentModel(id="Led Zeppelin", track="Black Dog", audio="https://p.scdn.co/mp3-preview/9b76619fd9d563a48d38cc90ca00c3008327b52e?cid=99b4bc438bd34e57a55674a469249810", cover_art="https://i.scdn.co/image/ab67616d0000b273c8a11e48c91a982d086afc69")
-
-for i in [s1, s2, s3, s4]:
-    db.session.add(i)
-
 db.session.commit()
+AUTH_URL = 'https://accounts.spotify.com/api/token'
+CLIENT_ID="99b4bc438bd34e57a55674a469249810"
+CLIENT_SECRET="e3f928cb542849e99a2c65d0db1f8708"
 
 
-
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    models = RecentModel.query.all()
-    return render_template('index.html', recent_models=models)
+    access_token = reset_token()
+    headers = {
+        'Authorization': 'Bearer {token}'.format(token=access_token)
+    }
+    if request.method == 'POST':
+        RecentModel.query.delete()
+        category = request.form['category']
+        category = category.lower().replace(' ', '')
+        category_url = f"https://api.spotify.com/v1/browse/categories/{category}/playlists"
+        response = requests.get(category_url, headers=headers)
+        playlist_id = response.json()['playlists']['items'][random.randrange(0, len(response.json()['playlists']['items']))]['id']
+        getplaylist_url = "https://api.spotify.com/v1/playlists/" + playlist_id + "/tracks"
+        response = requests.get(getplaylist_url, headers=headers, params={"limit": 30})
+        print(response)
+        for track in response.json()['items'][:10]:
+            t = track['track']['name']
+            audio = track['track']['preview_url']
+            cover_art = track['track']['album']['images'][0]['url']
+            idd = track['track']['album']['artists'][0]['name']
+            addRecentModel(idd, t, audio, cover_art)
+        for track in response.json()['items'][10:20]:
+            t = track['track']['name']
+            audio = track['track']['preview_url']
+            cover_art = track['track']['album']['images'][0]['url']
+            idd = track['track']['album']['artists'][0]['name']
+            addTopTrackModel(idd, t, audio, cover_art)
+    recent_models = RecentModel.query.all()
+    track_models = TopTracksModel.query.all()
+    return render_template('index.html', recent_models=recent_models, tracks_models=track_models, categories=categories(headers))
+
+def addRecentModel(id, track, audio, cover_art):
+    db.session.add(RecentModel(id=id, track=track, audio=audio, cover_art=cover_art))
+
+def addTopTrackModel(id, track, audio, cover_art):
+    db.session.add(TopTracksModel(id=id, track=track, audio=audio, cover_art=cover_art))
+
+def reset_token():
+    auth_response = requests.post(AUTH_URL, {
+        'grant_type': 'client_credentials',
+        'client_id': CLIENT_ID,
+        'client_secret': CLIENT_SECRET,
+    })
+    auth_response_data = auth_response.json()
+    return auth_response_data['access_token']
+
+def categories(headers):
+    response = requests.get("https://api.spotify.com/v1/browse/categories", headers=headers)
+    return [i['name'] for i in response.json()['categories']['items']]
 
 @app.route('/hello/')
 @app.route('/hello/<name>')
@@ -78,7 +118,7 @@ def dashboard():
     return render_template('dashboard.html')
 
 @app.route('/requests')
-def requests():
+def requests_def():
     return render_template('listener/requests.html')
 
 @app.route('/community')
