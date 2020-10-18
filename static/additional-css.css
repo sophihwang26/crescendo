@@ -83,7 +83,7 @@ hr {
 .sidebar a {
   padding: 8px 8px 8px 30px;
   text-decoration: none;
-  font-size: 19px;
+  font-size: 22px;
   color: #4ecdc4;
   display: block;
 }
@@ -264,10 +264,10 @@ td {
 }
 
 .menuicon {
-  width: 25px;
-  height: 25px;
-  margin-right: 18px;
-  margin-top: -5px;
+  width: 27px;
+  height: 27px;
+  margin-right: 22px;
+  margin-top: -6px;
 }
 
 /* card stuff */
@@ -559,8 +559,8 @@ td {
 .discover-front {
  height: 400px;
  grid-area: frontAndBack;
-  background-color: #4ecdc4;
-  color: white;
+ color: white;
+  background-color: #4ecdc4 !important;
   text-align: center;
   border-radius: 15px;
 }
@@ -585,28 +585,13 @@ td {
 }
 
 .crescendoLogo {
-  width: 220px;
+  width: 235px;
   height: auto;
   text-align: center;
+  padding-bottom: 20px;
 }
 
 td a {
   display: block;
 }
 
-#exampleModal {
-  overflow-y: scroll;
-}
-
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1 !important;
-  width: 100vw;
-  height: 100vh;
-  background-color: #1a535c !important;
-}
-
-
-.modal { background: rgba(000, 000, 000, 0.8); min-height:1000000px; }
