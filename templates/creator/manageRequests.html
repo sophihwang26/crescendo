@@ -43,12 +43,14 @@
 
         <!-- Card 1 -->
         <div class="col-sm-3 card-container" id="discover-card">
-            <div class="front" id="front0" style="background-color=#d5d5d5">
+            <div class="discover-front" id="front0" style="background-color=#d5d5d5">
               <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
                 <div class="card-body">
                   <img class="card-img-top" src="../static/assets/add-icon.png" width='30' height=auto alt="add card">
                   <div id="song-text">
                     <h4 id="request-add-title" style="margin-top=20px">Add a Request</h4>
+                    <br>
+                    <p class="song-artist">You may post up to 10 distinct requests on your Crescendo page. You currently have 3 request options available.</p>
                   </div>
                 </div>
               </div>
@@ -57,13 +59,14 @@
 
         <!-- Card 2 -->
         <div class="col-sm-3 card-container" id="discover-card">
-            <div class="front" id="front0">
+            <div class="discover-front" id="front0">
               <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
                 <div class="card-body">
                   <img class="card-img-top" src="../static/assets/Stats.png" alt="Card image cap">
                   <div id="song-text">
                     <h4 class="song-title">Cover a Song</h4>
-                    <p class="song-artist">$50</p>
+                    <p class="song-artist">Have a song that you want me to cover? Let me know and I'll arrange and record something for you all :)</p>
+                    <p class="song-artist"><b>$50</b></p>
                   </div>
                 </div>
               </div>
@@ -72,13 +75,14 @@
 
         <!-- Card 3 -->
         <div class="col-sm-3 card-container" id="discover-card">
-            <div class="front" id="front0">
+            <div class="discover-front" id="front0">
               <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
                 <div class="card-body">
                   <img class="card-img-top" src="../static/assets/Stats.png" alt="Card image cap">
                   <div id="song-text">
                     <h4 class="song-title">Happy Birthday Message</h4>
-                    <p class="song-artist">$25</p>
+                    <p class="song-artist">Want to surprise your friend for their birthday? I'd be happy to help!</p>
+                    <p class="song-artist"><b>$25</b></p>
                   </div>
                 </div>
               </div>
@@ -87,13 +91,14 @@
 
         <!-- Card 4 -->
         <div class="col-sm-3 card-container" id="discover-card">
-            <div class="front" id="front0">
+            <div class="discover-front" id="front0">
               <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
                 <div class="card-body">
                   <img class="card-img-top" src="../static/assets/Stats.png" alt="Card image cap">
                   <div id="song-text">
                     <h4 class="song-title">Music & Dance Challenge</h4>
-                    <p class="song-artist">$100</p>
+                    <p class="song-artist">Ever wanted to see my try (and fail) at my best BTS impersonation? Now you can!</p>
+                    <p class="song-artist"><b>$100</b></p>
                   </div>
                 </div>
               </div>
@@ -111,10 +116,10 @@
       <table class="table table-hover">
         <thead>
           <tr>
-            <th scope="col">#</th>
-            <th scope="col">Request</th>
-            <th scope="col">Name</th>
-            <th scope="col">Contact Info</th>
+            <th scope="col" style="font-size: 18px; background-color:#1a535c; color:white">#</th>
+            <th scope="col" style="font-size: 18px; background-color:#1a535c; color:white">Request</th>
+            <th scope="col" style="font-size: 18px; background-color:#1a535c; color:white">Name</th>
+            <th scope="col" style="font-size: 18px; background-color:#1a535c; color:white">Contact Info</th>
           </tr>
         </thead>
         <tbody>
@@ -137,6 +142,12 @@
               <td><a data-toggle="modal" data-target="#exampleModal">Happy Birthday Message</a></td>
               <td><a data-toggle="modal" data-target="#exampleModal">Wolfang A. Mozart</a></td>
               <td><a data-toggle="modal" data-target="#exampleModal">wolfgang@magicflute.com</a></td>
+          </tr>
+          <tr class="clickable-row" >
+              <th scope="row"><a data-toggle="modal" data-target="#exampleModal">4</a></th>
+              <td><a data-toggle="modal" data-target="#exampleModal">Cover a Song</a></td>
+              <td><a data-toggle="modal" data-target="#exampleModal">Jimin Park</a></td>
+              <td><a data-toggle="modal" data-target="#exampleModal">mochi@bighit.net</a></td>
           </tr>
         </tbody>
     </table>
