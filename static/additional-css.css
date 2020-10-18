@@ -574,3 +574,9 @@ td {
   margin-top: 3px;
   display: inline-block;
 }
+
+.crescendoLogo {
+  width: 300px;
+  height: auto;
+  text-align: center;
+}
