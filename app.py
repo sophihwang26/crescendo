@@ -46,30 +46,34 @@ def index():
     headers = {
         'Authorization': 'Bearer {token}'.format(token=access_token)
     }
-    if request.method == 'POST':
-        RecentModel.query.delete()
-        category_url = f"{request.form['category']}/playlists"
-        print(category_url)
-        response = requests.get(category_url, headers=headers)
-        playlist_id = response.json()['playlists']['items'][random.randrange(0, len(response.json()['playlists']['items']))]['id']
-        getplaylist_url = "https://api.spotify.com/v1/playlists/" + playlist_id + "/tracks"
-        response = requests.get(getplaylist_url, headers=headers, params={"limit": 30})
-        print(response)
-        for track in response.json()['items'][:10]:
-            t = track['track']['name']
-            audio = track['track']['preview_url']
-            cover_art = track['track']['album']['images'][0]['url']
-            idd = track['track']['album']['artists'][0]['name']
-            addRecentModel(idd, t, audio, cover_art)
-        for track in response.json()['items'][10:20]:
-            t = track['track']['name']
-            audio = track['track']['preview_url']
-            cover_art = track['track']['album']['images'][0]['url']
-            idd = track['track']['album']['artists'][0]['name']
-            addTopTrackModel(idd, t, audio, cover_art)
-    recent_models = RecentModel.query.all()
-    track_models = TopTracksModel.query.all()
-    return render_template('index.html', recent_models=recent_models, tracks_models=track_models, categories=categories(headers))
+    try:
+        if request.method == 'POST':
+            RecentModel.query.delete()
+            category_url = f"{request.form['category']}/playlists"
+            print(category_url)
+            response = requests.get(category_url, headers=headers)
+            playlist_id = response.json()['playlists']['items'][random.randrange(0, len(response.json()['playlists']['items']))]['id']
+            getplaylist_url = "https://api.spotify.com/v1/playlists/" + playlist_id + "/tracks"
+            response = requests.get(getplaylist_url, headers=headers, params={"limit": 30})
+            print(response)
+            for track in response.json()['items'][:10]:
+                t = track['track']['name']
+                audio = track['track']['preview_url']
+                cover_art = track['track']['album']['images'][0]['url']
+                idd = track['track']['album']['artists'][0]['name']
+                addRecentModel(idd, t, audio, cover_art)
+            for track in response.json()['items'][10:20]:
+                t = track['track']['name']
+                audio = track['track']['preview_url']
+                cover_art = track['track']['album']['images'][0]['url']
+                idd = track['track']['album']['artists'][0]['name']
+                addTopTrackModel(idd, t, audio, cover_art)
+        recent_models = RecentModel.query.all()
+        track_models = TopTracksModel.query.all()
+        return render_template('index.html', recent_models=recent_models, tracks_models=track_models, categories=categories(headers))
+    except:
+        return render_template('index.html', recent_models=recent_models, tracks_models=track_models,
+                               categories=categories(headers))
 
 def addRecentModel(id, track, audio, cover_art):
     db.session.add(RecentModel(id=id, track=track, audio=audio, cover_art=cover_art))
