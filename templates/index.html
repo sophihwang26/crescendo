@@ -22,7 +22,7 @@
   <div id="mySidebar" class="sidebar">
     <a href="{{ url_for('index') }}" id="topMenu" style="font-size:26px; font-weight:600"><img alt="Crescendo logo" src='../static/assets/crescendo_logo.png' class="crescendoLogo"></a><br>
 
-    <a href="{{ url_for('songs') }}" id="topMenu"><img alt="songs" src='../static/assets/songs-icon.png' class="menuicon">Songs</span></a>
+    <a href="#" id="topMenu"><img alt="songs" src='../static/assets/songs-icon.png' class="menuicon">Songs</span></a>
     <a href="{{ url_for('playlists') }}" id="topMenu"><img alt="songs" src='../static/assets/playlist-icon.png' class="menuicon">Playlists</a></span></a>
     <a href="{{ url_for('artists') }}" id="topMenu"><img alt="songs" src='../static/assets/mic-icon.png' class="menuicon">Artists</span></a>
     <a href="{{ url_for('community') }}" id="topMenu"><img alt="songs" src='../static/assets/group-icon.png' class="menuicon">Community<span></a>
@@ -46,7 +46,7 @@
     <input type="checkbox" id="activate-div1" class="checkstyle" hidden>
       <label for="activate-div1">
        <div class="my-div">
-          Map
+          Location
        </div>
       </label>
     </span>
@@ -55,7 +55,7 @@
     <input type="checkbox" id="activate-div2" class="checkstyle" hidden>
       <label for="activate-div2">
        <div class="my-div">
-          Song / Album
+          Artist
        </div>
       </label>
     </span>
@@ -64,60 +64,29 @@
     <input type="checkbox" id="activate-div3" class="checkstyle" hidden>
       <label for="activate-div3">
        <div class="my-div">
-          Song / Album
+          Album
+       </div>
+      </label>
+    </span>
+
+    <span>
+    <input type="checkbox" id="activate-div4" class="checkstyle" hidden>
+      <label for="activate-div4">
+       <div class="my-div">
+          Beats per Minute
        </div>
       </label>
     </span>
 
       <br>
 
-    <span id="navLabels">Genre:</span>
-
-    <span>
-    <input type="checkbox" id="activate-div4" class="checkstyle" hidden>
-      <label for="activate-div4">
-       <div class="my-div">
-          Song / Album
-       </div>
-      </label>
-    </span>
-
-    <span>
-    <input type="checkbox" id="activate-div5" class="checkstyle" hidden>
-      <label for="activate-div5">
-       <div class="my-div">
-          Song / Album
-       </div>
-      </label>
-    </span>
-
-    <span>
-    <input type="checkbox" id="activate-div6" class="checkstyle" hidden>
-      <label for="activate-div6">
-       <div class="my-div">
-          Song / Album
-       </div>
-      </label>
-    </span>
-
-    <span>
-    <input type="checkbox" id="activate-div7" class="checkstyle" hidden>
-      <label for="activate-div7">
-       <div class="my-div">
-          Song / Album
-       </div>
-      </label>
-    </span>
-
       <form action="/" method="post">
-          <label for="category">Choose a category:</label>
+          <label for="category" id="navLabels">Choose a category:  </label>
           <select name="category">
             {% for i, href in categories %}
                 <option value="{{ href }}">{{ i }}</option>
             {% endfor %}
-          </select>
-          <br><br>
-          <input type="submit" value="Submit">
+          </select>      <input type="submit" value="Submit">
         </form>
         <h2>{{ cat }}</h2>
   </div>
