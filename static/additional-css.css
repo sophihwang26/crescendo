@@ -281,7 +281,7 @@ td {
 }
 
 .card-img:hover {
-  opacity: 0.85;
+  opacity: 0.7;
 }
 
 .gradient:hover {
@@ -326,11 +326,20 @@ td {
 
 .front {
   grid-area: frontAndBack;
-  background-color: #4ecdc4 !important;
+  background-color: #4ecdc4;
   color: white;
   text-align: center;
   height: 300px;
   border-radius: 15px;
+}
+
+.front-dashboard {
+  grid-area: frontAndBack;
+  color: white;
+  text-align: center;
+  height: 300px;
+  border-radius: 15px;
+  background-color: #f7fff7 !important;
 }
 
 .card-img {
