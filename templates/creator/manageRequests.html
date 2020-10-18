@@ -11,8 +11,6 @@
     scroll-behavior: smooth;
   }
 
-  }
-
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
@@ -27,7 +25,7 @@
     <a href="yourMusic.html" id="topMenu"><img alt="songs" src='../../static/assets/songs-icon.png' class="menuicon">Your Music</span></a>
     <a href="stat.html" id="topMenu"><img alt="songs" src='../../static/assets/playlist-icon.png' class="menuicon">Insights</a></span></a>
     <a href="manageCommunity.html" id="topMenu"><img alt="songs" src='../../static/assets/mic-icon.png' class="menuicon">Community</span></a>
-    <a href="manageRequests.html" id="topMenu" class="activeLink"><img alt="songs" src='../../static/assets/req-icon.png' class="menuicon">Requests<span></a>
+    <a href="{{ url_for('manageRequests') }}" id="topMenu" class="activeLink"><img alt="songs" src='../../static/assets/req-icon.png' class="menuicon">Requests<span></a>
 
     <a href="../dashboard.html" id="bottomMenu"><img alt="songs" src='../../static/assets/dash-icon.png' class="menuicon">Artist Dashboard</a>
   </div>
@@ -38,65 +36,110 @@
   <a id="about" class="anchor"></a>
   <h1 class="heading">Manage Requests</h1>
 
-  <!-- Events -->
+  <!-- Recently Added -->
+  <h2 class="heading">Recently Added</h2>
     <a id="resources main" class="anchor"></a>
-      <div class="row center" style="padding: 0px 0px 20px 0px">
+      <div class="row center discover" style="padding: 0px 0px 20px 0px">
 
         <!-- Card 1 -->
-        <div class="col-sm-6 card-container" id="event-card">
-            <div class="front-dashboard" id="front0">
-              <h2 id="card-title-dash">Your Music</h2>
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(26, 83, 92, 0.95), 30%)">
-                <div class="card-img" style="background-image: url('../../static/assets/Music Playlist.png'); background-position: calc(100%) calc(100% + 1.2rem)">
-                  <button class="button-card" onclick="location.href='creator/yourMusic.html'">
-                  </button>
+        <div class="col-sm-3 card-container" id="discover-card">
+            <div class="front" id="front0" style="background-color=#d5d5d5">
+              <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
+                <div class="card-body">
+                  <img class="card-img-top" src="../static/assets/add-icon.png" width='30' height=auto alt="add card">
+                  <div id="song-text">
+                    <h4 id="request-add-title" style="margin-top=20px">Add Request</h4>
+                  </div>
                 </div>
               </div>
             </div>
         </div>
 
         <!-- Card 2 -->
-        <div class="col-sm-6 card-container" id="event-card">
-            <div class="front-dashboard" id="front1">
-              <h2 id="card-title-dash">Insights</h2>
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
-                <div class="card-img" style="background-image: url('../../static/assets/Stats.png'); background-position: calc(100%) calc(100% + 0.9rem)">
-                  <button class="button-card" onclick="location.href='creator/stats.html'">
-                  </button>
+        <div class="col-sm-3 card-container" id="discover-card">
+            <div class="front" id="front0">
+              <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
+                <div class="card-body">
+                  <img class="card-img-top" src="../static/assets/Stats.png" alt="Card image cap">
+                  <div id="song-text">
+                    <h4 class="song-title">Song title</h4>
+                    <p class="song-artist">Song artist</p>
+                  </div>
                 </div>
               </div>
             </div>
         </div>
+
+        <!-- Card 3 -->
+        <div class="col-sm-3 card-container" id="discover-card">
+            <div class="front" id="front0">
+              <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
+                <div class="card-body">
+                  <img class="card-img-top" src="../static/assets/Stats.png" alt="Card image cap">
+                  <div id="song-text">
+                    <h4 class="song-title">Song title</h4>
+                    <p class="song-artist">Song artist</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-sm-3 card-container" id="discover-card">
+            <div class="front" id="front0">
+              <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
+                <div class="card-body">
+                  <img class="card-img-top" src="../static/assets/Stats.png" alt="Card image cap">
+                  <div id="song-text">
+                    <h4 class="song-title">Song title</h4>
+                    <p class="song-artist">Song artist</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
       </div>
 
-      <div class="row center" style="padding: 0px 0px 20px 0px">
+​<hr />​​​​​​​​​​​​​​​​​​​
 
-        <!-- Card 1 -->
-        <div class="col-sm-6 card-container" id="event-card">
-            <div class="front-dashboard" id="front0">
-              <h2 id="card-title-dash">Community</h2>
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
-                <div class="card-img" style="background-image: url('../../static/assets/Community.png'); background-position: calc(100%) calc(100% + 0.9rem)">
-                  <button class="button-card" onclick="location.href='creator/manageCommunity.html'">
-                  </button>
-                </div>
-              </div>
-            </div>
-        </div>
+<!--  Table-->
+  <h2 class="heading">Active Requests</h2>
+    <div class="requesttable">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr role="button" href="#">
+            <th scope="row">1</th>
+            <td>Blah Blah</td>
+            <td>1234567</td>
+            <td>more text</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td><a href="#">Blah Blah</a></td>
+            <td><a href="#">1234567</a></td>
+            <td><a href="#">more text</a></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td><a href="#">Blah Blah</a></td>
+            <td><a href="#">1234567</a></td>
+            <td><a href="#">more text</a></td>
+          </tr>
+        </tbody>
+    </table>
 
-        <!-- Card 2 -->
-        <div class="col-sm-6 card-container" id="event-card">
-            <div class="front-dashboard" id="front1">
-              <h2 id="card-title-dash">Requests</h2>
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
-                <div class="card-img" style="background-image: url('../../static/assets/Personal Requests.png'); background-position: calc(100%) calc(100% + 1.5rem)">
-                  <button class="button-card" onclick="location.href='creator/manageRequests.html'">
-                  </button>
-                </div>
-              </div>
-            </div>
-        </div>
-      </div>
+    </div>
 
       <!-- <script>
       function goToMusic(button) {

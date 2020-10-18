@@ -580,3 +580,8 @@ td {
   height: auto;
   text-align: center;
 }
+
+td a {
+   display: block;
+}
+

@@ -40,6 +40,30 @@ def music(name=None, song=None, url=None):
 def dashboard():
     return render_template('dashboard.html')
 
+@app.route('/requests')
+def requests():
+    return render_template('listener/requests.html')
+
+@app.route('/community')
+def community():
+    return render_template('listener/community.html')
+
+@app.route('/playlists')
+def playlists():
+    return render_template('listener/playlists.html')
+
+@app.route('/songs')
+def songs():
+    return render_template('listener/songs.html')
+
+@app.route('/artists')
+def artists():
+    return render_template('listener/artists.html')
+
+@app.route('/manageRequests')
+def manageRequests():
+    return render_template('creator/manageRequests.html')
+
 def search_results(search_form):
     lz_uri = 'spotify:artist:36QJpDe2go2KgaRleHCDTp'
     results = spotify.artist_top_tracks(lz_uri)
