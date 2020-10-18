@@ -49,6 +49,7 @@ def index():
     try:
         if request.method == 'POST':
             RecentModel.query.delete()
+            TopTracksModel.query.delete()
             category_url = f"{request.form['category']}/playlists"
             print(category_url)
             response = requests.get(category_url, headers=headers)
@@ -68,11 +69,9 @@ def index():
                 cover_art = track['track']['album']['images'][0]['url']
                 idd = track['track']['album']['artists'][0]['name']
                 addTopTrackModel(idd, t, audio, cover_art)
-        recent_models = RecentModel.query.all()
-        track_models = TopTracksModel.query.all()
-        return render_template('index.html', recent_models=recent_models, tracks_models=track_models, categories=categories(headers))
+        return render_template('index.html', recent_models=RecentModel.query.all(), tracks_models=TopTracksModel.query.all(), categories=categories(headers))
     except:
-        return render_template('index.html', recent_models=recent_models, tracks_models=track_models,
+        return render_template('index.html', recent_models=RecentModel.query.all(), tracks_models=TopTracksModel.query.all(),
                                categories=categories(headers))
 
 def addRecentModel(id, track, audio, cover_art):
