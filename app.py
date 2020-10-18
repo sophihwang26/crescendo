@@ -55,15 +55,15 @@ def index():
             response = requests.get(category_url, headers=headers)
             playlist_id = response.json()['playlists']['items'][random.randrange(0, len(response.json()['playlists']['items']))]['id']
             getplaylist_url = "https://api.spotify.com/v1/playlists/" + playlist_id + "/tracks"
-            response = requests.get(getplaylist_url, headers=headers, params={"limit": 30})
+            response = requests.get(getplaylist_url, headers=headers, params={"limit": 50})
             print(response)
-            for track in response.json()['items'][:10]:
+            for track in response.json()['items'][:8]:
                 t = track['track']['name']
                 audio = track['track']['preview_url']
                 cover_art = track['track']['album']['images'][0]['url']
                 idd = track['track']['album']['artists'][0]['name']
                 addRecentModel(idd, t, audio, cover_art)
-            for track in response.json()['items'][10:20]:
+            for track in response.json()['items'][8:16]:
                 t = track['track']['name']
                 audio = track['track']['preview_url']
                 cover_art = track['track']['album']['images'][0]['url']

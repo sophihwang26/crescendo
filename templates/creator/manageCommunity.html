@@ -23,7 +23,7 @@
     <a href="{{ url_for('index') }}" id="topMenu" style="font-size:26px; font-weight:600"><img alt="Crescendo logo" src='../../static/assets/crescendo_logo.png' class="crescendoLogo"></a><br>
 
     <a href="{{ url_for('yourMusic') }}" id="topMenu"><img alt="songs" src='../../static/assets/songs-icon.png' class="menuicon">Your Music</span></a>
-    <a href="{{ url_for('stat') }}" id="topMenu"><img alt="songs" src='../../static/assets/playlist-icon.png' class="menuicon">Insights</a></span></a>
+    <a href="{{ url_for('stat') }}" id="topMenu"><img alt="songs" src='../../static/assets/stats-icon.png' class="menuicon">Insights</a></span></a>
     <a href="{{ url_for('manageCommunity') }}" id="topMenu" class="activeLink"><img alt="songs" src='../../static/assets/group-icon.png' class="menuicon">Community</span></a>
     <a href="{{ url_for('manageRequests') }}" id="topMenu"><img alt="songs" src='../../static/assets/req-icon.png' class="menuicon">Requests<span></a>
 
@@ -34,136 +34,8 @@
 <!-- About Us -->
 <div class="container">
   <a id="about" class="anchor"></a>
-  <h1 class="heading">Manage Requests</h1>
-
-  <!-- Recently Added -->
-  <h2 class="heading">Recently Added</h2>
-    <a id="resources main" class="anchor"></a>
-      <div class="row center discover" style="padding: 0px 0px 20px 0px">
-
-        <!-- Card 1 -->
-        <div class="col-sm-3 card-container" id="discover-card">
-            <div class="front" id="front0" style="background-color=#d5d5d5">
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
-                <div class="card-body">
-                  <img class="card-img-top" src="../static/assets/add-icon.png" width='30' height=auto alt="add card">
-                  <div id="song-text">
-                    <h4 id="request-add-title" style="margin-top=20px">Add Request</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="col-sm-3 card-container" id="discover-card">
-            <div class="front" id="front0">
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
-                <div class="card-body">
-                  <img class="card-img-top" src="../static/assets/Stats.png" alt="Card image cap">
-                  <div id="song-text">
-                    <h4 class="song-title">Song title</h4>
-                    <p class="song-artist">Song artist</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="col-sm-3 card-container" id="discover-card">
-            <div class="front" id="front0">
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
-                <div class="card-body">
-                  <img class="card-img-top" src="../static/assets/Stats.png" alt="Card image cap">
-                  <div id="song-text">
-                    <h4 class="song-title">Song title</h4>
-                    <p class="song-artist">Song artist</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="col-sm-3 card-container" id="discover-card">
-            <div class="front" id="front0">
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
-                <div class="card-body">
-                  <img class="card-img-top" src="../static/assets/Stats.png" alt="Card image cap">
-                  <div id="song-text">
-                    <h4 class="song-title">Song title</h4>
-                    <p class="song-artist">Song artist</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
-
-
-      </div>
-
-​<hr />​​​​​​​​​​​​​​​​​​​
-
-<!--  Table-->
-  <h2 class="heading">Active Requests</h2>
-    <div class="requesttable">
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Request</th>
-            <th scope="col">Name</th>
-            <th scope="col">Contact Info</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Button trigger modal -->
-
-          <tr class="clickable-row" >
-              <th scope="row"><a data-toggle="modal" data-target="#exampleModal">1</a></th>
-              <td><a data-toggle="modal" data-target="#exampleModal">Blah Blah</a></td>
-              <td><a data-toggle="modal" data-target="#exampleModal">Blah Blah</a></td>
-              <td><a data-toggle="modal" data-target="#exampleModal">Blah Blah</a></td>
-          </tr>
-          <tr class="clickable-row">
-            <th scope="row">2</th>
-            <td><a href="#">Blah Blah</a></td>
-            <td><a href="#">1234567</a></td>
-            <td><a href="#">more text</a></td>
-          </tr>
-          <tr class="clickable-row">
-            <th scope="row">3</th>
-            <td><a href="#">Blah Blah</a></td>
-            <td><a href="#">1234567</a></td>
-            <td><a href="#">more text</a></td>
-          </tr>
-        </tbody>
-    </table>
-
-    </div>
-
-
-
-    <!-- Modal -->
-    <div class="modal fade data-background=false" data-focus="true" data-background="false" id="exampleModal" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content rounded-15">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Request</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body" style="border-radius: 10px;">
-            apsdfij has requested for you to sing a cover of "xyz" song by apsdoifj artist. You have received $100 for this request.
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
+  <h1 class="heading">Community Notes</h1>
+  <img src='../../static/assets/community-static.png' width=auto height=auto>
 
 </div>
 
