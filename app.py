@@ -5,6 +5,7 @@ import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 from flask_sqlalchemy import SQLAlchemy
 
+
 client_id = "99b4bc438bd34e57a55674a469249810"
 client_secret = "e3f928cb542849e99a2c65d0db1f8708"
 spotify = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id, client_secret))
@@ -99,6 +100,18 @@ def artists():
 @app.route('/manageRequests')
 def manageRequests():
     return render_template('creator/manageRequests.html')
+
+@app.route('/manageCommunity')
+def manageCommunity():
+    return render_template('creator/manageCommunity.html')
+
+@app.route('/stat')
+def stat():
+    return render_template('creator/stat.html')
+
+@app.route('/yourMusic')
+def yourMusic():
+    return render_template('creator/yourMusic.html')
 
 def search_results(search_form):
     lz_uri = 'spotify:artist:36QJpDe2go2KgaRleHCDTp'

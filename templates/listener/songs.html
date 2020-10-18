@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<title>Crescendo</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-4.2.1-dist/css/bootstrap.min.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='additional-css.css') }}" />
+<link href="https://fonts.googleapis.com/css?family=Nunito:wght@600" rel="stylesheet">
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div id="mySidebar" class="sidebar">
+    <a href="{{ url_for('index') }}" id="topMenu" style="font-size:26px; font-weight:600"><img alt="Crescendo logo" src='../static/assets/crescendo_logo.png' class="crescendoLogo"></a><br>
+
+    <a href="{{ url_for('songs') }}" id="topMenu" class="activeLink"><img alt="songs" src='../static/assets/songs-icon.png' class="menuicon">Songs</span></a>
+    <a href="{{ url_for('playlists') }}" id="topMenu"><img alt="songs" src='../static/assets/playlist-icon.png' class="menuicon">Playlists</a></span></a>
+    <a href="{{ url_for('artists') }}" id="topMenu"><img alt="songs" src='../static/assets/mic-icon.png' class="menuicon">Artists</span></a>
+    <a href="{{ url_for('community') }}" id="topMenu"><img alt="songs" src='../static/assets/group-icon.png' class="menuicon">Community<span></a>
+    <a href="{{ url_for('requests') }}" id="topMenu"><img alt="songs" src='../static/assets/req-icon.png' class="menuicon">Requests<span></a>
+
+    <a href="{{ url_for('dashboard') }}" id="bottomMenu" class="activeLink"><img alt="songs" src='../static/assets/dash-icon.png' class="menuicon">Artist Dashboard</a>
+  </div>
+
+<div id="main">
+<!-- About Us -->
+<div class="container">
+  <a id="about" class="anchor"></a>
+  <h1 class="heading">Artist Dashboard</h1>
+
+  <!-- Events -->
+    <a id="resources main" class="anchor"></a>
+      <div class="row center" style="padding: 0px 0px 20px 0px">
+
+        <!-- Card 1 -->
+        <div class="col-sm-6 card-container" id="event-card">
+            <div class="front-dashboard" id="front0">
+              <h2 id="card-title-dash">Your Music</h2>
+              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(26, 83, 92, 0.95), 30%)">
+                <div class="card-img" style="background-image: url('../static/assets/Music Playlist.png'); background-position: calc(100%) calc(100% + 30px)">
+                  <button class="button-card" onclick="location.href='creator/yourMusic.html'">
+                  </button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-sm-6 card-container" id="event-card">
+            <div class="front-dashboard" id="front1">
+              <h2 id="card-title-dash">Insights</h2>
+              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
+                <div class="card-img" style="background-image: url('../static/assets/Stats.png'); background-position: calc(100%) calc(100% + 30px)">
+                  <button class="button-card" onclick="location.href='creator/stats.html'">
+                  </button>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="row center" style="padding: 0px 0px 20px 0px">
+
+        <!-- Card 1 -->
+        <div class="col-sm-6 card-container" id="event-card">
+            <div class="front-dashboard" id="front0">
+              <h2 id="card-title-dash">Community</h2>
+              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
+                <div class="card-img" style="background-image: url('../static/assets/Community.png'); background-position: calc(100%) calc(100% + 20px)">
+                  <button class="button-card" onclick="location.href='creator/manageCommunity.html'">
+                  </button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-sm-6 card-container" id="event-card">
+            <div class="front-dashboard" id="front1">
+              <h2 id="card-title-dash">Requests</h2>
+              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
+                <div class="card-img" style="background-image: url('../static/assets/Personal Requests.png'); background-position: calc(100%) calc(100% + 20px)">
+                  <button class="button-card" onclick="location.href='{{ url_for('manageRequests') }}'">
+                  </button>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- <script>
+      function goToMusic(button) {
+        location.href="";
+      }
+      </script> -->
+</div>
+
+
+<div class="center"><br>© 2020 Sophia Hwang, Lucy Jiang, and Justin Ong</div>
+
+</body>
+</html>
+
+<script>
+
+</script>

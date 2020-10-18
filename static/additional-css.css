@@ -576,12 +576,39 @@ td {
 }
 
 .crescendoLogo {
-  width: 300px;
-  height: auto;
+  width: 220px;
+  height: 100;
   text-align: center;
 }
 
 td a {
-   display: block;
+  display: block;
 }
 
+#exampleModal {
+  overflow-y: scroll;
+}
+
+.modal-backdrop {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1 !important;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1a535c !important;
+}
+
+.modal-content  {
+    -webkit-border-radius: 15px !important;
+    -moz-border-radius: 15px !important;
+    border-radius: 15px !important;
+}
+
+.modal-dialog {
+    -webkit-border-radius: 15px !important;
+    -moz-border-radius: 15px !important;
+    border-radius: 15px !important;
+}
+
+.modal { background: rgba(000, 000, 000, 0.8); min-height:1000000px; }

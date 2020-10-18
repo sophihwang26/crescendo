@@ -20,14 +20,14 @@
 <body>
 
   <div id="mySidebar" class="sidebar">
-    <a href="../index.html" id="topMenu" style="font-size:26px; font-weight:600"><img alt="Crescendo logo" src='../../static/assets/crescendo_logo.png' width='220' height='100'></a><br>
+    <a href="{{ url_for('index') }}" id="topMenu" style="font-size:26px; font-weight:600"><img alt="Crescendo logo" src='../../static/assets/crescendo_logo.png' class="crescendoLogo"></a><br>
 
-    <a href="yourMusic.html" id="topMenu"><img alt="songs" src='../../static/assets/songs-icon.png' class="menuicon">Your Music</span></a>
-    <a href="stat.html" id="topMenu"><img alt="songs" src='../../static/assets/playlist-icon.png' class="menuicon">Insights</a></span></a>
-    <a href="manageCommunity.html" id="topMenu"><img alt="songs" src='../../static/assets/mic-icon.png' class="menuicon">Community</span></a>
+    <a href="{{ url_for('yourMusic') }}" id="topMenu"><img alt="songs" src='../../static/assets/songs-icon.png' class="menuicon">Your Music</span></a>
+    <a href="{{ url_for('stat') }}" id="topMenu"><img alt="songs" src='../../static/assets/playlist-icon.png' class="menuicon">Insights</a></span></a>
+    <a href="{{ url_for('manageCommunity') }}" id="topMenu"><img alt="songs" src='../../static/assets/mic-icon.png' class="menuicon">Community</span></a>
     <a href="{{ url_for('manageRequests') }}" id="topMenu" class="activeLink"><img alt="songs" src='../../static/assets/req-icon.png' class="menuicon">Requests<span></a>
 
-    <a href="../dashboard.html" id="bottomMenu"><img alt="songs" src='../../static/assets/dash-icon.png' class="menuicon">Artist Dashboard</a>
+    <a href="{{ url_for('dashboard') }}" id="bottomMenu"><img alt="songs" src='../../static/assets/dash-icon.png' class="menuicon">Artist Dashboard</a>
   </div>
 
 <div id="main">
@@ -120,14 +120,12 @@
         <tbody>
           <!-- Button trigger modal -->
 
-            <tr class="clickable-row" >
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                <th scope="row">1</th>
-                <td>Blah Blah</td>
-                <td>1234567</td>
-                <td>more text</td>
-              </button>
-            </tr>
+          <tr class="clickable-row" >
+              <th scope="row"><a data-toggle="modal" data-target="#exampleModal">1</a></th>
+              <td><a data-toggle="modal" data-target="#exampleModal">Blah Blah</a></td>
+              <td><a data-toggle="modal" data-target="#exampleModal">Blah Blah</a></td>
+              <td><a data-toggle="modal" data-target="#exampleModal">Blah Blah</a></td>
+          </tr>
           <tr class="clickable-row">
             <th scope="row">2</th>
             <td><a href="#">Blah Blah</a></td>
@@ -148,21 +146,20 @@
 
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
+    <div class="modal fade data-background=false" data-focus="true" data-background="false" id="exampleModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content rounded-15">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Request</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">
-            ...
+          <div class="modal-body" style="border-radius: 10px;">
+            apsdfij has requested for you to sing a cover of "xyz" song by apsdoifj artist. You have received $100 for this request.
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-primary">Close</button>
           </div>
         </div>
       </div>

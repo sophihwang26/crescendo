@@ -22,15 +22,15 @@
 <body>
 
   <div id="mySidebar" class="sidebar">
-    <a href="../index.html" id="topMenu" style="font-size:26px; font-weight:600"><img alt="Crescendo logo" src='../../static/assets/crescendo_logo.png' width='220' height='100'></a><br>
+    <a href="{{ url_for('index') }}" id="topMenu" style="font-size:26px; font-weight:600"><img alt="Crescendo logo" src='../static/assets/crescendo_logo.png' class="crescendoLogo"></a><br>
 
-    <a href="songs.html" id="topMenu"><img alt="songs" src='../../static/assets/songs-icon.png' class="menuicon">Songs</span></a>
-    <a href="playlists.html" id="topMenu"><img alt="songs" src='../../static/assets/playlist-icon.png' class="menuicon">Playlists</a></span></a>
-    <a href="artists.html" id="topMenu"><img alt="songs" src='../../static/assets/mic-icon.png' class="menuicon">Artists</span></a>
-    <a href="community.html" id="topMenu"><img alt="songs" src='../../static/assets/group-icon.png' class="menuicon">Community<span></a>
-    <a href="requests.html" id="topMenu" class="activeLink"><img alt="songs" src='../../static/assets/req-icon.png' class="menuicon">Requests<span></a>
+    <a href="{{ url_for('songs') }}" id="topMenu"><img alt="songs" src='../static/assets/songs-icon.png' class="menuicon">Songs</span></a>
+    <a href="{{ url_for('playlists') }}" id="topMenu"><img alt="songs" src='../static/assets/playlist-icon.png' class="menuicon">Playlists</a></span></a>
+    <a href="{{ url_for('artists') }}" id="topMenu"><img alt="songs" src='../static/assets/mic-icon.png' class="menuicon">Artists</span></a>
+    <a href="{{ url_for('community') }}" id="topMenu"><img alt="songs" src='../static/assets/group-icon.png' class="menuicon">Community<span></a>
+    <a href="{{ url_for('requests') }}" id="topMenu" class="activeLink"><img alt="songs" src='../static/assets/req-icon.png' class="menuicon">Requests<span></a>
 
-    <a href="../dashboard.html" id="bottomMenu"><img alt="songs" src='../../static/assets/dash-icon.png' class="menuicon">Artist Dashboard</a>
+    <a href="{{ url_for('dashboard') }}" id="bottomMenu" class="activeLink"><img alt="songs" src='../static/assets/dash-icon.png' class="menuicon">Artist Dashboard</a>
   </div>
 
 <div id="main">
