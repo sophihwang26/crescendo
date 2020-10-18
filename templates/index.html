@@ -117,68 +117,25 @@
   <h2 class="heading">Recently Added</h2>
     <a id="resources main" class="anchor"></a>
       <div class="row center discover" style="padding: 0px 0px 20px 0px">
-
+        {% for i in recent_models %}
+            <div class="col-sm-3 card-container" id="discover-card">
+                <div class="front" id="front0">
+                  <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
+                    <div class="card-body">
+                      <img class="card-img-top" src="{{ i.cover_art }}" alt="Card image cap">
+                      <div id="song-text">
+                        <h4 class="song-title">{{ i.track }}</h4>
+                        <p class="song-artist">{{ i.id }}</p>
+                        <audio controls style="width: 100%">
+                            <source src="{{ i.audio }}" type="audio/mp3">
+                        </audio>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        {% endfor %}
         <!-- Card 1 -->
-        <div class="col-sm-3 card-container" id="discover-card">
-            <div class="front" id="front0">
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
-                <div class="card-body">
-                  <img class="card-img-top" src="../static/assets/Stats.png" alt="Card image cap">
-                  <div id="song-text">
-                    <h4 class="song-title">Song title</h4>
-                    <p class="song-artist">Song artist</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="col-sm-3 card-container" id="discover-card">
-            <div class="front" id="front0">
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
-                <div class="card-body">
-                  <img class="card-img-top" src="../static/assets/Stats.png" alt="Card image cap">
-                  <div id="song-text">
-                    <h4 class="song-title">Song title</h4>
-                    <p class="song-artist">Song artist</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="col-sm-3 card-container" id="discover-card">
-            <div class="front" id="front0">
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
-                <div class="card-body">
-                  <img class="card-img-top" src="../static/assets/Stats.png" alt="Card image cap">
-                  <div id="song-text">
-                    <h4 class="song-title">Song title</h4>
-                    <p class="song-artist">Song artist</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="col-sm-3 card-container" id="discover-card">
-            <div class="front" id="front0">
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
-                <div class="card-body">
-                  <img class="card-img-top" src="../static/assets/Stats.png" alt="Card image cap">
-                  <div id="song-text">
-                    <h4 class="song-title">Song title</h4>
-                    <p class="song-artist">Song artist</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
-
-
       </div>
 
       ​<hr />​​​​​​​​​​​​​​​​​​​
