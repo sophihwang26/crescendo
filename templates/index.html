@@ -21,17 +21,17 @@
 
 <body>
 
-    <div id="mySidebar" class="sidebar">
-      <a href="index.html" id="topMenu" style="font-size:26px; font-weight:600"><span><i class="material-icons">asfd</i><span class="icon-text"></span>Crescendo</span></a><br>
+  <div id="mySidebar" class="sidebar">
+    <a href="index.html" id="topMenu" style="font-size:26px; font-weight:600"><img alt="Crescendo logo" src='../assets/crescendo_logo.png' width='220' height='100'></a><br>
 
-      <a href="#" id="topMenu"><span><i class="material-icons">songs</i><span class="icon-text"></span>Songs</span></a>
-      <a href="#" id="topMenu"><span><i class="material-icons">playlists</i><span class="icon-text"></span>Playlists</a></span></a>
-      <a href="#" id="topMenu"><span><i class="material-icons">artists</i><span class="icon-text"></span>Artists</span></a>
-      <a href="#" id="topMenu"><span><i class="material-icons">requests</i><span class="icon-text"></span>Requests<span></a>
-      <a href="#" id="topMenu"><span><i class="material-icons">community</i><span class="icon-text"></span>Community<span></a>
+    <a href="#" id="topMenu"><img alt="songs" src='../assets/songs-icon.png' class="menuicon">Songs</span></a>
+    <a href="#" id="topMenu"><img alt="songs" src='../assets/playlist-icon.png' class="menuicon">Playlists</a></span></a>
+    <a href="#" id="topMenu"><img alt="songs" src='../assets/mic-icon.png' class="menuicon">Artists</span></a>
+    <a href="#" id="topMenu"><img alt="songs" src='../assets/req-icon.png' class="menuicon">Requests<span></a>
+    <a href="#" id="topMenu"><img alt="songs" src='../assets/group-icon.png' class="menuicon">Community<span></a>
 
-      <a href="dashboard.html" id="bottomMenu"><span><i class="material-icons">dashboard</i><span class="icon-text"></span>Artist Dashboard<span></a>
-    </div>
+    <a href="dashboard.html" id="bottomMenu"><img alt="songs" src='../assets/dash-icon.png' class="menuicon">Artist Dashboard</a>
+  </div>
 
 <div id="main">
 <!-- About Us -->
@@ -113,7 +113,7 @@
 
   </div>
 
-​<hr />​​​​​​​​​​​​​​​​​​​<br />
+​<hr />​​​​​​​​​​​​​​​​​​​
 
   <!-- Recently Added -->
   <h2 class="heading">Recently Added</h2>
@@ -123,56 +123,67 @@
         <!-- Card 1 -->
         <div class="col-sm-3 card-container" id="discover-card">
             <div class="front" id="front0">
-              <img class="card-img-top" src="..." alt="Card image cap">
-              <div class="card-body">
-                <h3 class="card-title">Song title</h3>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="col-sm-3 card-container" id="discover-card">
-            <div class="front" id="front1">
-              <h2 id="card-title">Insights</h2>
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
-                <div class="card-img" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url('images/events/biglittle.jpg')">
-                  <button class="button-card" onclick="showBack(1)">
-                  </button>
+              <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
+                <div class="card-body">
+                  <img class="card-img-top" src="../assets/Stats.png" alt="Card image cap">
+                  <div id="song-text">
+                    <h4 class="song-title">Song title</h4>
+                    <p class="song-artist">Song artist</p>
+                  </div>
                 </div>
               </div>
             </div>
         </div>
 
-        <!-- Card 1 -->
+        <!-- Card 2 -->
         <div class="col-sm-3 card-container" id="discover-card">
             <div class="front" id="front0">
-              <h2 id="card-title">Your Music</h2>
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
-                <div class="card-img" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url('images/events/departmentalsocials.jpg')">
-                  <button class="button-card" onclick="showBack(0)">
-                  </button>
+              <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
+                <div class="card-body">
+                  <img class="card-img-top" src="../assets/Stats.png" alt="Card image cap">
+                  <div id="song-text">
+                    <h4 class="song-title">Song title</h4>
+                    <p class="song-artist">Song artist</p>
+                  </div>
                 </div>
               </div>
             </div>
         </div>
 
-        <!-- Card 2 -->
+        <!-- Card 3 -->
         <div class="col-sm-3 card-container" id="discover-card">
-            <div class="front" id="front1">
-              <h2 id="card-title">Insights</h2>
-              <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
-                <div class="card-img" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url('images/events/biglittle.jpg')">
-                  <button class="button-card" onclick="showBack(1)">
-                  </button>
+            <div class="front" id="front0">
+              <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
+                <div class="card-body">
+                  <img class="card-img-top" src="../assets/Stats.png" alt="Card image cap">
+                  <div id="song-text">
+                    <h4 class="song-title">Song title</h4>
+                    <p class="song-artist">Song artist</p>
+                  </div>
                 </div>
               </div>
             </div>
         </div>
+
+        <!-- Card 4 -->
+        <div class="col-sm-3 card-container" id="discover-card">
+            <div class="front" id="front0">
+              <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
+                <div class="card-body">
+                  <img class="card-img-top" src="../assets/Stats.png" alt="Card image cap">
+                  <div id="song-text">
+                    <h4 class="song-title">Song title</h4>
+                    <p class="song-artist">Song artist</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
       </div>
 
-      ​<hr />​​​​​​​​​​​​​​​​​​​<br />
+      ​<hr />​​​​​​​​​​​​​​​​​​​
 
       <!-- Top Tracks -->
       <h2 class="heading">Top Tracks</h2>
@@ -182,54 +193,64 @@
             <!-- Card 1 -->
             <div class="col-sm-3 card-container" id="discover-card">
                 <div class="front" id="front0">
-                  <h2 id="card-title">Your Music</h2>
-                  <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
-                    <div class="card-img" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url('images/events/departmentalsocials.jpg')">
-                      <button class="button-card" onclick="showBack(0)">
-                      </button>
+                  <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
+                    <div class="card-body">
+                      <img class="card-img-top" src="../assets/Stats.png" alt="Card image cap">
+                      <div id="song-text">
+                        <h4 class="song-title">Song title</h4>
+                        <p class="song-artist">Song artist</p>
+                      </div>
                     </div>
                   </div>
                 </div>
             </div>
 
             <!-- Card 2 -->
-            <div class="col-sm-3 card-container" id="discover-card">
-                <div class="front" id="front1">
-                  <h2 id="card-title">Insights</h2>
-                  <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
-                    <div class="card-img" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url('images/events/biglittle.jpg')">
-                      <button class="button-card" onclick="showBack(1)">
-                      </button>
-                    </div>
-                  </div>
-                </div>
-            </div>
-
-            <!-- Card 1 -->
             <div class="col-sm-3 card-container" id="discover-card">
                 <div class="front" id="front0">
-                  <h2 id="card-title">Your Music</h2>
-                  <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
-                    <div class="card-img" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url('images/events/departmentalsocials.jpg')">
-                      <button class="button-card" onclick="showBack(0)">
-                      </button>
+                  <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
+                    <div class="card-body">
+                      <img class="card-img-top" src="../assets/Stats.png" alt="Card image cap">
+                      <div id="song-text">
+                        <h4 class="song-title">Song title</h4>
+                        <p class="song-artist">Song artist</p>
+                      </div>
                     </div>
                   </div>
                 </div>
             </div>
 
-            <!-- Card 2 -->
+            <!-- Card 3 -->
             <div class="col-sm-3 card-container" id="discover-card">
-                <div class="front" id="front1">
-                  <h2 id="card-title">Insights</h2>
-                  <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
-                    <div class="card-img" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url('images/events/biglittle.jpg')">
-                      <button class="button-card" onclick="showBack(1)">
-                      </button>
+                <div class="front" id="front0">
+                  <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
+                    <div class="card-body">
+                      <img class="card-img-top" src="../assets/Stats.png" alt="Card image cap">
+                      <div id="song-text">
+                        <h4 class="song-title">Song title</h4>
+                        <p class="song-artist">Song artist</p>
+                      </div>
                     </div>
                   </div>
                 </div>
             </div>
+
+            <!-- Card 4 -->
+            <div class="col-sm-3 card-container" id="discover-card">
+                <div class="front" id="front0">
+                  <div class="gradient" style="background-image: linear-gradient(to top, rgba(26, 83, 92, 0.8), rgba(26, 83, 92, 0), 30%)">
+                    <div class="card-body">
+                      <img class="card-img-top" src="../assets/Stats.png" alt="Card image cap">
+                      <div id="song-text">
+                        <h4 class="song-title">Song title</h4>
+                        <p class="song-artist">Song artist</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+
           </div>
 
 </div>
