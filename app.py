@@ -78,7 +78,7 @@ def dashboard():
     return render_template('dashboard.html')
 
 @app.route('/requests')
-def requests():
+def requests_def():
     return render_template('listener/requests.html')
 
 @app.route('/community')
