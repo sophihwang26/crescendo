@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<title>Crescendo</title>
+<link rel="stylesheet" href={{ url_for('static', filename='bootstrap-4.2.1-dist/css/bootstrap.min.css') }}" />
+<link rel="stylesheet" type="text/css" href={{ url_for('static', filename='additional-css.css') }} />
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  }
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<!--Nav Bar-->
+  <!-- <a class="navbar-brand" href="index.html#"><img src="images/TransparentHusky.png" height="55px" width=auto
+      id="husky-navbar"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button> -->
+
+  <div id="mySidebar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
+    <a href="#"><span><i class="material-icons">asfd</i><span class="icon-text"></span>Crescendo</span></a><br><br>
+    <a href="#"><span><i class="material-icons">info</i><span class="icon-text"></span>about</span></a><br>
+    <a href="#"><span><i class="material-icons">spag</i><span class="icon-text"></span>services</a></span></a><br>
+    <a href="#"><span><i class="material-icons">mone</i><span class="icon-text"></span>clients</span></a><br>
+    <a href="#"><span><i class="material-icons">emai</i><span class="icon-text"></span>contact<span></a>
+
+    <a href="dashboard.html" id="bottomMenu"><span><i class="material-icons">emai</i><span class="icon-text"></span>contact<span></a>
+  </div>
+
+<div id="main">
+    <h2>{{ name }}</h2>
+    <p>{{ song }}</p>
+    <video controls="" autoplay="" name="media">
+      <source src='https://p.scdn.co/mp3-preview/8455599677a13017978dcd3f4b210937f0a16bcb?cid=99b4bc438bd34e57a55674a469249810' type="audio/mp3">
+    </video>
+</div>
+
+<!-- Contact -->
+<div class="container">
+<a id="contact" class="anchor"></a>
+<h1>
+  <div class="center">Contact</div>
+</h1>
+<div class="section center">
+  <h5>Stay connected with ACM!</h5>
+  <a target="_blank" href="https://tinyurl.com/acmMailingList2021"><img src="images/emailicon.png" class="resourceImg" id="emailIcon"></a>
+  <a target="_blank" href="https://www.facebook.com/uwacm/"><img src="images/facebooklogo.png" class="resourceImg"></a>
+  <a target="_blank" href="https://www.instagram.com/uwacm/"><img src="images/instalogo.jpeg" class="resourceImg"></a>
+  <a target="_blank" href="https://medium.com/uwacm/"><img src="images/mediumlogo.png" class="resourceImg"></a>
+  <a target="_blank" href="https://uw-cse-ugrad.slack.com/"><img src="images/slacklogo.png" class="resourceImg"></a>
+  <br>(Note: the Slack channel requires a @cs.washington.edu account)
+  <p></p>
+  For any questions or comments, please contact us at <a
+    href="mailto:acm-officers@cs.washington.edu">acm-officers@cs.washington.edu</a>.
+</div>
+<p></p>
+</div>
+
+<div class="center">© 2020 Sophia Hwang, Lucy Jiang, and Justin Ong</div>
+
+</div>
+</body>
+</html>
+
+<script>
+
+function escapeURL() {
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var c = url.searchParams.get("name");
+    return c
+}
+
+var mini = true;
+
+function toggleSidebar() {
+  if (mini) {
+    document.getElementById("main").style.marginLeft = "23%";
+    document.getElementById("mySidebar").style.width = "23%";
+    document.getElementById("mySidebar").style.display = "block";
+    this.mini = false;
+  } else {
+    console.log("closing sidebar");
+    document.getElementById("mySidebar").style.width = "85px";
+    document.getElementById("main").style.marginLeft = "85px";
+    this.mini = true;
+  }
+}
+
+</script>

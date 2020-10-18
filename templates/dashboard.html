@@ -22,15 +22,15 @@
 <body>
 
   <div id="mySidebar" class="sidebar">
-    <a href="index.html" id="topMenu" style="font-size:26px; font-weight:600"><span><i class="material-icons">asfd</i><span class="icon-text"></span>Crescendo</span></a><br>
+    <a href="index.html" id="topMenu" style="font-size:26px; font-weight:600"><img alt="Crescendo logo" src='../assets/crescendo_logo.png' width='220' height='100'></a><br>
 
-    <a href="#" id="topMenu"><span><i class="material-icons">songs</i><span class="icon-text"></span>Songs</span></a>
-    <a href="#" id="topMenu"><span><i class="material-icons">playlists</i><span class="icon-text"></span>Playlists</a></span></a>
-    <a href="#" id="topMenu"><span><i class="material-icons">artists</i><span class="icon-text"></span>Artists</span></a>
-    <a href="#" id="topMenu"><span><i class="material-icons">requests</i><span class="icon-text"></span>Requests<span></a>
-    <a href="#" id="topMenu"><span><i class="material-icons">community</i><span class="icon-text"></span>Community<span></a>
+    <a href="#" id="topMenu"><img alt="songs" src='../assets/songs-icon.png' class="menuicon">Songs</span></a>
+    <a href="#" id="topMenu"><img alt="songs" src='../assets/playlist-icon.png' class="menuicon">Playlists</a></span></a>
+    <a href="#" id="topMenu"><img alt="songs" src='../assets/mic-icon.png' class="menuicon">Artists</span></a>
+    <a href="#" id="topMenu"><img alt="songs" src='../assets/req-icon.png' class="menuicon">Requests<span></a>
+    <a href="#" id="topMenu"><img alt="songs" src='../assets/group-icon.png' class="menuicon">Community<span></a>
 
-    <a href="dashboard.html" id="bottomMenu"><span><i class="material-icons">dashboard</i><span class="icon-text"></span>Artist Dashboard<span></a>
+    <a href="dashboard.html" id="bottomMenu" class="activeLink"><img alt="songs" src='../assets/dash-icon.png' class="menuicon">Artist Dashboard</a>
   </div>
 
 <div id="main">
@@ -49,7 +49,7 @@
               <h2 id="card-title-dash">Your Music</h2>
               <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(26, 83, 92, 0.95), 30%)">
                 <div class="card-img" style="background-image: url('../assets/Music Playlist.png'); background-position: calc(100%) calc(100% + 1.2rem)">
-                  <button class="button-card" onclick="showBack(0)">
+                  <button class="button-card" onclick="location.href='creator/yourMusic.html'">
                   </button>
                 </div>
               </div>
@@ -62,7 +62,7 @@
               <h2 id="card-title-dash">Insights</h2>
               <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
                 <div class="card-img" style="background-image: url('../assets/Stats.png'); background-position: calc(100%) calc(100% + 0.9rem)">
-                  <button class="button-card" onclick="showBack(1)">
+                  <button class="button-card" onclick="location.href='creator/stats.html'">
                   </button>
                 </div>
               </div>
@@ -78,7 +78,7 @@
               <h2 id="card-title-dash">Community</h2>
               <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
                 <div class="card-img" style="background-image: url('../assets/Community.png'); background-position: calc(100%) calc(100% + 0.9rem)">
-                  <button class="button-card" onclick="showBack(0)">
+                  <button class="button-card" onclick="location.href='creator/manageCommunity.html'">
                   </button>
                 </div>
               </div>
@@ -91,7 +91,7 @@
               <h2 id="card-title-dash">Requests</h2>
               <div class="gradient" style="background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.95), 70%)">
                 <div class="card-img" style="background-image: url('../assets/Personal Requests.png'); background-position: calc(100%) calc(100% + 1.5rem)">
-                  <button class="button-card" onclick="showBack(1)">
+                  <button class="button-card" onclick="location.href='creator/manageRequests.html'">
                   </button>
                 </div>
               </div>
@@ -99,6 +99,11 @@
         </div>
       </div>
 
+      <!-- <script>
+      function goToMusic(button) {
+        location.href="";
+      }
+      </script> -->
 </div>
 
 

@@ -30,6 +30,12 @@ def search():
         return render_template('search.html', form=search, results=search_results(search)['audio'])
     return render_template('search.html', form=search, results=[])
 
+@app.route('/music')
+@app.route('/music/<name>/<song>/<path:url>')
+def music(name=None, song=None, url=None):
+    print(url)
+    return render_template('music.html', name=name, song=song, url=url)
+
 @app.route('/dashboard')
 def dashboard():
     return render_template('dashboard.html')
