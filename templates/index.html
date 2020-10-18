@@ -112,14 +112,14 @@
       <form action="/" method="post">
           <label for="category">Choose a category:</label>
           <select name="category">
-            {% for i in categories %}
-                <option value="{{ i }}">{{ i }}</option>
+            {% for i, href in categories %}
+                <option value="{{ href }}">{{ i }}</option>
             {% endfor %}
           </select>
           <br><br>
           <input type="submit" value="Submit">
         </form>
-
+        <h2>{{ cat }}</h2>
   </div>
 
 ​<hr />​​​​​​​​​​​​​​​​​​​

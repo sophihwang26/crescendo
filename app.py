@@ -48,9 +48,8 @@ def index():
     }
     if request.method == 'POST':
         RecentModel.query.delete()
-        category = request.form['category']
-        category = category.lower().replace(' ', '')
-        category_url = f"https://api.spotify.com/v1/browse/categories/{category}/playlists"
+        category_url = f"{request.form['category']}/playlists"
+        print(category_url)
         response = requests.get(category_url, headers=headers)
         playlist_id = response.json()['playlists']['items'][random.randrange(0, len(response.json()['playlists']['items']))]['id']
         getplaylist_url = "https://api.spotify.com/v1/playlists/" + playlist_id + "/tracks"
@@ -89,7 +88,7 @@ def reset_token():
 
 def categories(headers):
     response = requests.get("https://api.spotify.com/v1/browse/categories", headers=headers)
-    return [i['name'] for i in response.json()['categories']['items']]
+    return [(i['name'], i['href']) for i in response.json()['categories']['items']]
 
 @app.route('/hello/')
 @app.route('/hello/<name>')
